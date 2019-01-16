@@ -1,0 +1,22 @@
+.brand-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    width: 170px !important;
+    padding: 0 10px;
+
+    &.swiper-slide-active {
+      width: 300px !important;
+
+      & .brand-card__img_normal {
+        opacity: 1;
+      }
+
+      & .brand-card__img_black {
+        opacity: 0;
+      }
+    }
+  }
+}

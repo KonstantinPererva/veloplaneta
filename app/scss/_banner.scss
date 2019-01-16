@@ -1,0 +1,22 @@
+.banner {
+  background: url(../images/bg-banner.png) no-repeat;
+  background-size: cover;
+  margin: 0 0 60px;
+
+  &__hold {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 1024px;
+    height: 400px;
+    padding: 0 22px;
+    margin: 0 auto;
+  }
+
+  &__form {
+    flex-shrink: 0;
+    border-radius: 2px;
+    border: 1px solid $c-border-form;
+    background: #fff;
+  }
+}

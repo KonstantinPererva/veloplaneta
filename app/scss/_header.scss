@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background: #fff;
+
+  &__hold {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 0 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__block {
+    flex-shrink: 0;
+
+    &_right {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__button {
+    flex-shrink: 0;
+    margin: 0 15px 0 0;
+  }
+}

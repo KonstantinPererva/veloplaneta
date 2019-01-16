@@ -1,0 +1,21 @@
+.button-link {
+  font-size: 14px;
+  line-height: 17px;
+  font-family: $f-l;
+  border: 0;
+  border-bottom: 1px dashed currentColor;
+  background: transparent;
+  border-radius: 0;
+  color: $c-red;
+  padding: 0 2px;
+  user-select: none;
+  text-decoration: none;
+
+  &:hover {
+    @media (hover:hover) {
+      cursor: pointer;
+      border-color: transparent;
+      text-decoration: none;
+    }
+  }
+}
