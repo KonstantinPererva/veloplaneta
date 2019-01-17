@@ -1,0 +1,14 @@
+.created-by-link {
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px 0 0;
+  transition: .15s;
+
+  &:hover {
+    @media (hover: hover) {
+      & svg path {
+        fill: #159;
+      }
+    }
+  }
+}

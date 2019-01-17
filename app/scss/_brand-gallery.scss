@@ -4,13 +4,13 @@
   &__scrollbar {
     position: relative;
     width: 280px;
-    height: 6px;
+    height: 5px;
     background: #e9e9e9;
     border-radius: 3px;
     margin: 20px auto;
 
     & .swiper-scrollbar-drag {
-      height: 6px;
+      height: 5px;
       background: $c-text;
       border-radius: 3px;
       

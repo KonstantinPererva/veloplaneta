@@ -8,5 +8,13 @@
   &__item {
     width: 33.3333%;
     margin: 0 0 60px;
+
+    @media (max-width: 991px) {
+      width: 50%;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
 }

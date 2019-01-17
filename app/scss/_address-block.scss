@@ -24,6 +24,7 @@
   &__ico {
     display: block;
     margin: 0 auto;
+    transition: .2s;
   }
 
   &__text {
@@ -32,5 +33,6 @@
     font-size: 14px;
     line-height: 17px;
     white-space: nowrap;
+    padding: 2px 0;
   }
 }

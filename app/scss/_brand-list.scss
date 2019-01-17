@@ -4,14 +4,19 @@
   margin: 0;
 
   &__item {
-    width: 170px !important;
+    width: 196px !important;
     padding: 0 10px;
 
     &.swiper-slide-active {
-      width: 300px !important;
+
+      & .brand-card__img-wrap {
+        box-shadow: 0 0 3px rgba(0,0,0,.2);
+        transform: scale(1.16);
+      }
 
       & .brand-card__img_normal {
         opacity: 1;
+        will-change: transform;
       }
 
       & .brand-card__img_black {

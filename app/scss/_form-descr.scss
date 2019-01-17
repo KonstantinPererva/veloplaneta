@@ -1,0 +1,10 @@
+.form-descr {
+  padding: 0 0 10px;
+
+  &__text {
+    font-size: 14px;
+    font-family: $f-l;
+    line-height: 19px;
+    color: $c-text;
+  }
+}

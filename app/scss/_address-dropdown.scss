@@ -2,7 +2,6 @@
   position: relative;
   width: 230px;
   height: 37px;
-  overflow: hidden;
 
   &__inner {
     position: absolute;
@@ -11,5 +10,19 @@
     width: 100%;
     background: #fff;
     z-index: 1;
+    height: 37px;
+    overflow: hidden;
+    transition: .2s;
+
+    &:hover {
+      @media (hover: hover) {
+        height: 235px;
+        box-shadow: 0 3px 3px rgba(0,0,0,.2);
+
+        & .address__ico_arrow {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 }

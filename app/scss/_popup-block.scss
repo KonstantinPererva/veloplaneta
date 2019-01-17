@@ -1,0 +1,9 @@
+.popup-block {
+  &__form {
+    flex-shrink: 0;
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid $c-border-form;
+    margin: auto;
+  }
+}
