@@ -20,4 +20,9 @@
       text-decoration: none;
     }
   }
+
+  &:focus, &:active {
+    border-bottom: 1px dashed currentColor;
+    text-decoration: none;
+  }
 }

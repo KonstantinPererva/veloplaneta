@@ -97,6 +97,7 @@ if(document.querySelectorAll('[data-button-toggle]')) {
 
 if(document.querySelectorAll('[data-open-popup]')) {
     var buttonOpenPopup = document.querySelectorAll('[data-open-popup]');
+    var wrapper = document.querySelector('.wrapper');
 
     Array.prototype.forEach.call(buttonOpenPopup, function (btn) {
         btn.popup = document.querySelector('[data-popup=' + btn.dataset.openPopup + ']');
@@ -104,10 +105,14 @@ if(document.querySelectorAll('[data-open-popup]')) {
 
         btn.addEventListener('click', function () {
             btn.popup.style.display = 'block';
+            wrapper.style.height = '100vh';
+            wrapper.style.overflow = 'hidden';
         });
 
         btn.substrate.addEventListener('click', function () {
             btn.popup.style.display = 'none';
+            wrapper.style.height = '';
+            wrapper.style.overflow = '';
         });
     });
 }

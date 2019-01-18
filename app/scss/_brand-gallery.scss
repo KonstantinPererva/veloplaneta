@@ -13,12 +13,6 @@
       height: 5px;
       background: $c-text;
       border-radius: 3px;
-      
-      &:hover {
-        @media (hover: hover) {
-          cursor: grab;
-        }
-      }
     }
   }
 }
