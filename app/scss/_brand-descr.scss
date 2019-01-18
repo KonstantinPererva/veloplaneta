@@ -1,3 +1,7 @@
 .brand-descr {
   padding: 10px 30px 0 0;
+
+  @media (max-width: 767px) {
+    padding: 10px 0 0;
+  }
 }

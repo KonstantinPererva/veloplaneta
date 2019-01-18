@@ -1,0 +1,19 @@
+.header-logo {
+  margin: 0;
+  font-weight: normal;
+  width: 181px;
+  padding: 4.5px 0;
+
+  @media (max-width: 767px) {
+    width: 116px;
+  }
+
+  &__ico-wrap {
+    display: block;
+  }
+
+  &__ico {
+    display: block;
+    width: 100%;
+  }
+}

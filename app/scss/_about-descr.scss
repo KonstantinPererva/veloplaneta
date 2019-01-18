@@ -2,6 +2,11 @@
   position: relative;
   padding: 20px 0 0;
 
+  @media (max-width: 767px) {
+    height: 270px;
+    overflow: hidden;
+  }
+
   &:after, &:before {
     content: '';
     position: absolute;

@@ -7,6 +7,10 @@
     width: 196px !important;
     padding: 0 10px;
 
+    @media (max-width: 767px) {
+      width: 178px !important;
+    }
+
     &.swiper-slide-active {
 
       & .brand-card__img-wrap {

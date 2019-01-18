@@ -8,6 +8,11 @@
     justify-content: center;
     width: 90px;
     margin: 0 5px 0 0;
+
+    @media (max-width: 767px) {
+      width: 60px;
+      margin: 0 25px 0 0;
+    }
   }
 
   &__ico {
@@ -20,5 +25,9 @@
     font-family: $f-l;
     color: $c-text;
     line-height: 21px;
+
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
   }
 }

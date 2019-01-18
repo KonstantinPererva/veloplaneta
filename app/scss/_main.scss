@@ -1,8 +1,10 @@
 .main {
-  &__substrate {
-  }
   background: url(../images/bg-section.png) no-repeat;
   background-size: contain;
   background-position-x: center;
   background-position-y: bottom;
+
+  @media (max-width: 767px) {
+    background: none;
+  }
 }

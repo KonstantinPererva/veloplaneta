@@ -6,10 +6,18 @@
 
   &__phone {
     padding: 3px 0 0;
+
+    @media (max-width: 767px) {
+      padding: 0;
+    }
   }
 
   &__time {
     padding: 10px 0;
+
+    @media (max-width: 767px) {
+      padding: 5px 0;
+    }
   }
 
   &__ico-wrap {
@@ -19,12 +27,38 @@
     justify-content: center;
     width: 40px;
     height: 37px;
+
+    @media (max-width: 767px) {
+      width: 26px;
+      height: 27px;
+    }
   }
 
   &__ico {
     display: block;
     margin: 0 auto;
     transition: .2s;
+
+    &_arrow {
+
+      @media (max-width: 767px) {
+        width: 12px;
+      }
+    }
+
+    &_phone {
+
+      @media (max-width: 767px) {
+        width: 10px;
+      }
+    }
+
+    &_clock {
+
+      @media (max-width: 767px) {
+        width: 16px;
+      }
+    }
   }
 
   &__text {
@@ -34,5 +68,9 @@
     line-height: 17px;
     white-space: nowrap;
     padding: 2px 0;
+
+    @media (max-width: 767px) {
+      font-size: 13px;
+    }
   }
 }
