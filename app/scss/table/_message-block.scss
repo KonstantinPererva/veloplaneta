@@ -1,0 +1,39 @@
+.message-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: #fff;
+  height: 45px;
+  padding: 0 30px 0;
+
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+
+  &__ico-wrap {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+  }
+
+  &__ico {
+    display: block;
+    transition: .15s;
+
+    & path {
+      fill: $c-red;
+    }
+
+    &_active {
+      transform: rotate(90deg);
+    }
+  }
+}

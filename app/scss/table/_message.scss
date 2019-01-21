@@ -1,0 +1,15 @@
+.message {
+  display: flex;
+
+  &__sidebar {
+    flex-shrink: 0;
+    width: 230px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12);
+    padding: 40px 0 0;
+  }
+
+  &__content {
+    flex-grow: 1;
+    padding: 70px 30px 30px;
+  }
+}

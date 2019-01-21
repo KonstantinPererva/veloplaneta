@@ -1,0 +1,9 @@
+.message-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    border-bottom: 1px solid #F2F2F2;
+  }
+}

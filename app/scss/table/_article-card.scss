@@ -1,0 +1,32 @@
+.article-card {
+  position: relative;
+  padding: 7px 0 7px 30px;
+
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+
+  &__indicator-wrap {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 13px;
+    display: flex;
+    justify-content: center;
+    width: 30px;
+  }
+
+  &__indicator {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ABABAB;
+
+    &_unread {
+      background: $c-red;
+    }
+  }
+}
