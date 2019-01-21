@@ -102,6 +102,7 @@ if(document.querySelectorAll('[data-open-popup]')) {
     Array.prototype.forEach.call(buttonOpenPopup, function (btn) {
         btn.popup = document.querySelector('[data-popup=' + btn.dataset.openPopup + ']');
         btn.substrate = btn.popup.querySelector('[data-popup-substrate]');
+        btn.close = btn.popup.querySelector('[data-popup-close]');
 
         btn.addEventListener('click', function () {
             btn.popup.style.display = 'block';
@@ -110,6 +111,12 @@ if(document.querySelectorAll('[data-open-popup]')) {
         });
 
         btn.substrate.addEventListener('click', function () {
+            btn.popup.style.display = 'none';
+            wrapper.style.height = '';
+            wrapper.style.overflow = '';
+        });
+
+        btn.close.addEventListener('click', function () {
             btn.popup.style.display = 'none';
             wrapper.style.height = '';
             wrapper.style.overflow = '';

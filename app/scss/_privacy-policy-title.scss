@@ -3,4 +3,8 @@
   line-height: 36px;
   text-align: center;
   padding: 20px 0;
+
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
 }

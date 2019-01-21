@@ -14,7 +14,7 @@
 <div class="wrapper">
     <header class="header">
         <div class="header__hold">
-            <a href="#" class="header__link">
+            <a href="/" class="header__link">
                 <h1 class="header-logo">
                         <span class="header-logo__ico-wrap">
                             <svg class="header-logo__ico" viewBox="0 0 181 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -264,7 +264,7 @@
                     </div>
 
                     <div class="form__button">
-                        <a href="#" class="button-link">
+                        <a href="forgot_password.html" class="button-link">
                             <span class="button-link__text">Забыли пароль?</span>
                         </a>
                     </div>
@@ -325,14 +325,18 @@
                         </button>
 
                         <a href="#" class="button-link">
-                            <span class="button-link__text">У меня уже есть аккаунт</span>
+                            <span class="button-link__text" data-popup-close="">У меня уже есть аккаунт</span>
                         </a>
                     </div>
 
                     <div class="form__button">
                         <div class="form-checkbox">
-                            <input type="text" class="form-checkbox__input" id="">
-                            <label for="">При регистрации Вы соглашаетесь с политикой конфиденциальности.</label>
+                            <input type="checkbox" class="form-checkbox__input" id="consent" style="display: none">
+
+                            <label for="consent" class="form-checkbox__label">
+                                <span class="form-checkbox__indicator"></span>
+                                <span class="form-checkbox__text">При регистрации Вы соглашаетесь с <a class="form-checkbox__link" target="_blank" href="privacy_policy.html">политикой конфиденциальности</a>.</span>
+                            </label>
                         </div>
                     </div>
                 </form>

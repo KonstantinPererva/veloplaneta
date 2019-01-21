@@ -4,6 +4,11 @@
   height: 37px;
 
   @media (max-width: 767px) {
+    width: 186px;
+    height: 27px;
+  }
+
+  @media (max-width: 359px) {
     width: 174px;
     height: 27px;
   }
@@ -22,16 +27,5 @@
     @media (max-width: 767px) {
       height: 27px;
     }
-    //
-    //&:hover {
-    //  @media (hover: hover) {
-    //    height: 235px;
-    //    box-shadow: 0 3px 3px rgba(0,0,0,.2);
-    //
-    //    & .address__ico_arrow {
-    //      transform: rotate(180deg);
-    //    }
-    //  }
-    //}
   }
 }
