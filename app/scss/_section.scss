@@ -9,6 +9,13 @@
     margin: 0 0 30px;
   }
 
+  &_about {
+    @media (max-width: 767px) {
+      background: url(../images/bg-section-mob.png) no-repeat center top;
+      background-size: contain;
+    }
+  }
+
   &__hold {
     max-width: 1024px;
     width: 100%;

@@ -1,8 +1,11 @@
 .main {
-  background: url(../images/bg-section.png) no-repeat;
+  background: url(../images/bg-section.png) no-repeat center bottom;
   background-size: contain;
-  background-position-x: center;
-  background-position-y: bottom;
+
+  @media (max-width: 1151px) {
+    background: url(../images/bg-section-tablet.png) no-repeat center bottom;
+    background-size: contain;
+  }
 
   @media (max-width: 767px) {
     background: none;
