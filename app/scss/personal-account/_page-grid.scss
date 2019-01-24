@@ -1,6 +1,7 @@
-.catalog-grid {
+.page-grid {
   display: flex;
   padding: 15px;
+  height: 100%;
 
   &__lever {
     flex-shrink: 0;
@@ -72,14 +73,18 @@
   &__left {
     flex-shrink: 0;
     width: 320px;
+    min-width: 290px;
+    max-width: 50%;
   }
 
   &__left-top {
     border: 1px solid $c-border-section;
+    height: 60%;
   }
 
   &__left-bottom {
     border: 1px solid $c-border-section;
+    height: calc(40% - 12px);
   }
 
   &__right {
@@ -93,6 +98,6 @@
 
   &__right-bottom {
     border: 1px solid $c-border-section;
-    height: 30%;
+    height: calc(30% - 12px);
   }
 }
