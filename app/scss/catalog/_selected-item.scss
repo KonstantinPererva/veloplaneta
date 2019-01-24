@@ -1,0 +1,44 @@
+.selected-item {
+  font-size: 13px;
+  line-height: 17px;
+  color: $c-text;
+  font-family: $f-l;
+  padding: 2px 0 2px 4px;
+  background: $c-bg-yellow;
+  display: flex;
+  align-items: flex-start;
+
+  &__title {
+    margin: 0 2px 0 0;
+  }
+
+  &__delete {
+    width: 17px;
+    height: 17px;
+    background: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+
+        & svg path {
+          fill: $c-red;
+        }
+      }
+    }
+
+    & svg {
+      flex-shrink: 0;
+      display: block;
+
+      & path {
+        transition: .15s;
+      }
+    }
+  }
+}

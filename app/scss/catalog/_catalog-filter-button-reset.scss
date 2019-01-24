@@ -1,0 +1,11 @@
+.catalog-filter-button-reset {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  padding: 6px 0;
+
+  &__text {
+    @extend .button-link;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,20 @@
+.catalog-link {
+  position: relative;
+  display: block;
+  color: $c-text;
+  font-family: $f-l;
+  font-size: 14px;
+  line-height: 17px;
+  padding: 4px 15px 4px 18px;
+  text-decoration: none;
+
+  &:hover {
+    @media (hover: hover) {
+      background: $c-hover-bg-list-link;
+    }
+  }
+  
+  &_active {
+    background: $c-active-bg-list-link;
+  }
+}

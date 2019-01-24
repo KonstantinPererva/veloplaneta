@@ -1,0 +1,11 @@
+.catalog-filter {
+
+  &__header {
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $c-bg-gray;
+  }
+}

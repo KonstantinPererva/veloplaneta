@@ -1,0 +1,27 @@
+.filter-card-title {
+  position: relative;
+  font-size: 13px;
+  line-height: 17px;
+  color: $c-text;
+  font-family: $f-l;
+  padding: 5px 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: -11px;
+    top: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 4px;
+    border-color: transparent transparent transparent $c-red;
+    transition: .15s;
+  }
+
+  &_active {
+    &:after {
+      transform: rotate(90deg);
+    }
+  }
+}
