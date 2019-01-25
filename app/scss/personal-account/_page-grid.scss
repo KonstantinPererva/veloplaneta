@@ -6,6 +6,8 @@
   &__lever {
     flex-shrink: 0;
     position: relative;
+    user-select: none;
+    outline: none;
 
     &:hover {
       @media (hover: hover) {

@@ -2,7 +2,6 @@
 
 class Resizing {
     constructor(node) {
-        //node
         this.node = node;
 
         //tools
@@ -44,6 +43,22 @@ class Resizing {
         this.leverHorizontal.addEventListener( 'mousedown', lever );
     }
 
+    moveLeverHorizontal() {
+        var move = function(e) {
+            if (!this.dragObject.elem) return; // элемент не зажат
+
+            var moveX = e.pageX - this.dragObject.downX;
+
+            console.log(moveX);
+
+            this.cellLeft.style.width = parseInt(this.cellLeft.style.width) + moveX + 'px';
+            this.cellRight.style.width = parseInt(this.cellRight.style.width) - moveX + 'px';
+            this.dragObject.downX += moveX;
+        };
+
+        document.body.addEventListener('mousemove', move);
+    }
+
     // getLeverVerticalLeft() {
     //     this.leverVerticalCellLeft.addEventListener('onmousedown', function(e) {
     //         if (e.which != 1) { // если клик правой кнопкой мыши
@@ -78,22 +93,6 @@ class Resizing {
             width: boxWidth,
             height: boxHeight
         };
-    }
-
-    moveLeverHorizontal() {
-        var move = function(e) {
-            if (!this.dragObject.elem) return; // элемент не зажат
-
-            var moveX = e.pageX - this.dragObject.downX;
-
-            console.log(moveX);
-
-            this.cellLeft.style.width = parseInt(this.cellLeft.style.width) + moveX + 'px';
-            this.cellRight.style.width = parseInt(this.cellRight.style.width) - moveX + 'px';
-            this.dragObject.downX += moveX;
-        }
-
-        document.body.addEventListener('mousemove', move);
     }
     //
     // moveLeverVertical(e) {
