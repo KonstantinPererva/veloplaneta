@@ -1,13 +1,15 @@
 .page-grid {
   display: flex;
-  padding: 15px;
+  padding: 55px 15px 15px;
   height: 100%;
+  overflow: hidden;
 
   &__lever {
     flex-shrink: 0;
     position: relative;
     user-select: none;
     outline: none;
+    touch-action: none;
 
     &:hover {
       @media (hover: hover) {
@@ -25,49 +27,24 @@
       }
     }
 
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-
     &_vertical {
-      width: 12px;
+      width: 13px;
 
       &:hover {
         @media (hover: hover) {
           cursor: col-resize;
         }
       }
-
-      &:after {
-        width: 2px;
-        height: 56px;
-        border-left: 1px solid $c-border;
-        border-right: 1px solid $c-border;
-      }
     }
 
     &_horizontal {
-      height: 12px;
+      height: 13px;
       width: 100%;
 
       &:hover {
-          @media (hover: hover) {
-            cursor: row-resize;
-          }
+        @media (hover: hover) {
+          cursor: row-resize;
         }
-
-      &:after {
-        width: 56px;
-        height: 2px;
-        border-top: 1px solid $c-border;
-        border-bottom: 1px solid $c-border;
       }
     }
   }
@@ -77,16 +54,22 @@
     width: 320px;
     min-width: 290px;
     max-width: 50%;
+    overflow: hidden;
   }
 
   &__left-top {
     border: 1px solid $c-border-section;
     height: 60%;
+    min-height: 10%;
+    max-height: 90%;
   }
 
   &__left-bottom {
     border: 1px solid $c-border-section;
-    height: calc(40% - 12px);
+    height: calc(40% - 13px);
+    min-height: calc(10% - 13px);
+    max-height: calc(90% - 13px);
+    overflow: hidden;
   }
 
   &__right {
@@ -96,10 +79,101 @@
   &__right-top {
     border: 1px solid $c-border-section;
     height: 70%;
+    min-height: 10%;
+    max-height: 90%;
   }
 
   &__right-bottom {
     border: 1px solid $c-border-section;
-    height: calc(30% - 12px);
+    height: calc(30% - 13px);
+    min-height: calc(10% - 13px);
+    max-height: calc(90% - 13px);
+    overflow: hidden;
+  }
+
+  &__row-hidden {
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    border: 0;
+  }
+
+  &__row-full {
+    height: calc(100% - 13px) !important;
+    max-height: calc(100% - 13px) !important;
+  }
+
+  &__cell-hidden {
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+    border: 0;
+  }
+
+  &__cell-full {
+    width: calc(100% - 13px) !important;
+    max-width: calc(100% - 13px) !important;
+  }
+
+  &__button-vertical {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 5px;
+    height: 56px;
+    border: 0;
+    background: transparent;
+    border-left: 1px solid $c-border;
+    border-right: 1px solid $c-border;
+    padding: 0;
+    z-index: 1;
+    user-select: none;
+    outline: none;
+
+    &:focus, &:active {
+      outline: none;
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+
+  &__button-horizontal {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 56px;
+    height: 5px;
+    border: 0;
+    background: transparent;
+    border-top: 1px solid $c-border;
+    border-bottom: 1px solid $c-border;
+    padding: 0;
+    z-index: 1;
+    user-select: none;
+    outline: none;
+
+    &:focus, &:active {
+      outline: none;
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+        outline: none;
+      }
+    }
   }
 }
