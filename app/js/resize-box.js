@@ -8,8 +8,6 @@ var Resizing = function(node) {
         dragObject: {},
 
         touches: {},
-        
-        // node : function() { return document.querySelector('[data-grid="container"]') },
 
         button : {
             leverHorizontal : function() { return resizeBox.node.querySelector('[data-grid="lever-horizontal"]') },
@@ -51,8 +49,7 @@ var Resizing = function(node) {
         },
 
         setSizeNode : function () {
-            resizeBox.node.style.width = window.innerWidth + 'px';
-            resizeBox.node.style.height = document.documentElement.clientHeight + 'px';
+            resizeBox.node.style.height = document.documentElement.clientHeight - 117 + 'px';
         },
 
         lever : function(e) {
@@ -208,7 +205,9 @@ var Resizing = function(node) {
 
             resizeBox.touches = e.changedTouches;
 
-            // if (elem !== (resizeBox.button.leverVerticalCellLeft() || resizeBox.button.leverHorizontal() || resizeBox.button.leverVerticalCellRight())) return;
+            if (!(elem === resizeBox.button.leverVerticalCellLeft()) &&
+                !(elem === resizeBox.button.leverHorizontal()) &&
+                !(elem === resizeBox.button.leverVerticalCellRight())) return;
 
             resizeBox.dragObject.downX = resizeBox.touches[0].pageX;
 
@@ -216,8 +215,6 @@ var Resizing = function(node) {
 
             var x = Math.round(resizeBox.touches[0].pageX);
             var y = Math.round(resizeBox.touches[0].pageY);
-
-            resizeBox.box.rowTopCellRight().innerHTML = ' ...... ' + x + ' ...... ' + y;
 
             resizeBox.setSizeBoxes();
 
@@ -317,8 +314,11 @@ var Resizing = function(node) {
         }
     };
 
-    resizeBox.init();
+    return {
+        init: resizeBox.init
+    }
 };
 
 
 var catalog = new Resizing(document.querySelector('[data-grid="container"]'));
+catalog.init();

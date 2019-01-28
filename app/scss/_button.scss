@@ -75,4 +75,38 @@
       margin: 0 0 15px;
     }
   }
+
+  &_transparent {
+    min-width: 55px;
+    height: 32px;
+    background: transparent;
+    border-color: $c-red;
+    border-radius: 2px;
+    color: $c-red;
+    transition: .15s;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      @media (hover:hover) {
+        background: $c-dark-red;
+        border-color: $c-dark-red;
+        color: #fff;
+
+        & svg path {
+          fill: #fff;
+        }
+      }
+    }
+
+    & svg {
+      display: block;
+
+      path {
+        transition: .15s;
+      }
+    }
+  }
 }

@@ -1,0 +1,13 @@
+.make-order {
+  @extend .button-common;
+  border-color: $c-red;
+  background: $c-red;
+  padding: 0 15px;
+  color: #fff;
+
+  &:hover {
+    @media (hover:hover) {
+      background: $c-dark-red;
+    }
+  }
+}

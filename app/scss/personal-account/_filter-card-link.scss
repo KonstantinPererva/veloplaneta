@@ -4,7 +4,13 @@
   line-height: 17px;
   color: $c-text;
   font-family: $f-l;
-  padding: 4px;
-  background: $c-bg-gray;
+  padding: 4px 6px;
+  background: $c-bg-filter-item;
   text-decoration: none;
+  border-radius: 2px;
+
+  &.active {
+    background: $c-red;
+    color: #fff;
+  }
 }

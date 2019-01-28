@@ -1,12 +1,13 @@
 .selected-item {
   font-size: 13px;
   line-height: 17px;
-  color: $c-text;
+  color: #fff;
   font-family: $f-l;
-  padding: 2px 0 2px 4px;
-  background: $c-bg-yellow;
+  padding: 2px 0 2px 6px;
+  background: $c-red;
   display: flex;
   align-items: flex-start;
+  border-radius: 2px;
 
   &__title {
     margin: 0 2px 0 0;
@@ -26,15 +27,19 @@
       @media (hover: hover) {
         cursor: pointer;
 
-        & svg path {
-          fill: $c-red;
+        & svg {
+          width: 13px;
+          height: 13px;
         }
       }
     }
 
     & svg {
       flex-shrink: 0;
+      width: 9px;
+      height: 9px;
       display: block;
+      transition: .1s;
 
       & path {
         transition: .15s;

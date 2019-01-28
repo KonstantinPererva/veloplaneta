@@ -1,0 +1,78 @@
+.catalog-form-search {
+  width: 470px;
+
+  &__row {
+    position: relative;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 32px;
+    border-radius: 2px;
+    border: 1px solid $c-search;
+    padding: 0 40px 0 12px;
+    color: $c-text;
+    font-size: 14px;
+    background: #fff;
+    z-index: 0;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $c-search;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $c-search;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $c-search;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $c-search;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    padding: 0;
+    z-index: 1;
+    user-select: none;
+    outline: none;
+    transition: .15s;
+
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+        background: $c-red;
+        outline: none;
+
+        & svg path {
+          fill: #fff;
+        }
+      }
+    }
+
+    &:focus, &:active {
+      outline: none;
+    }
+
+    & svg {
+      display: block;
+
+      & path {
+        transition: .15s;
+      }
+    }
+  }
+}

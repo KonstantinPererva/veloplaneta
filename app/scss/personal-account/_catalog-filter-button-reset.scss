@@ -1,7 +1,26 @@
 .catalog-filter-button-reset {
-  @extend .button-link;
-  position: absolute;
-  right: 16px;
-  top: 12px;
+  height: 20px;
   font-size: 12px;
+  line-height: 12px;
+  border: 1px solid currentColor;
+  color: $c-button-reset;
+  border-radius: 2px;
+  padding: 0 12px;
+  background: transparent;
+  transition: .15s;
+  user-select: none;
+  outline: none;
+
+  &:hover {
+    @media (hover: hover) {
+      color: $c-red;
+      border-color: $c-red;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+
+  &:focus, &.active {
+    outline: none;
+  }
 }

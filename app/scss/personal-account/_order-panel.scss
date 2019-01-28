@@ -1,0 +1,15 @@
+.order-panel {
+  display: flex;
+  justify-content: space-between;
+  height: 41px;
+
+  &__button-left {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__button-right {
+    display: flex;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,31 @@
+.button-common {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: $f-l;
+  line-height: 17px;
+  transition: .15s;
+  border-width: 1px;
+  border-style: solid;
+  outline: none;
+  user-select: none;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+
+  &:hover {
+    @media (hover:hover) {
+      outline: none;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  &:hover,&:focus,&:active {
+    text-decoration: none;
+    outline: none;
+  }
+}

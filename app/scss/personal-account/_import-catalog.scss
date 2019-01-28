@@ -1,0 +1,11 @@
+.import-catalog {
+  @extend .button-common;
+  margin: 0 8px 0 0;
+  border-color: #207245;
+  background: #207245;
+  padding: 0 5px;
+
+  & svg {
+    display: block;
+  }
+}
