@@ -300,8 +300,6 @@ var Resizing = function(node) {
         //Touch.....End.....................
 
         init : function () {
-            resizeBox.setSizeBoxes();
-
             resizeBox.addBodyListenerMousedown();
 
             resizeBox.addBodyListenerMouseup();

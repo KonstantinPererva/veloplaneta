@@ -1,0 +1,14 @@
+.button-history {
+  @extend .button-common;
+  border-color: $c-red;
+  padding: 0 16px;
+  background: transparent;
+  color: $c-red;
+
+  &:hover {
+    @media (hover:hover) {
+      color: #fff;
+      background: $c-red;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.button-voice {
+  @extend .button-common;
+  border-color: $c-red;
+  padding: 0 16px;
+  background: transparent;
+
+  &:hover {
+    @media (hover:hover) {
+      background: $c-red;
+
+      & svg path {
+        fill: #fff;
+      }
+    }
+  }
+
+  & svg {
+    display: block;
+
+    & path {
+      transition: .15s;
+    }
+  }
+}

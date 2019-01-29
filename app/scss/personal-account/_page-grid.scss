@@ -53,6 +53,7 @@
     width: 320px;
     min-width: 290px;
     max-width: 50%;
+    height: 100%;
     overflow: hidden;
   }
 
@@ -73,19 +74,20 @@
 
   &__right {
     flex-grow: 1;
+    height: 100%;
   }
 
   &__right-top {
     //border: 1px solid $c-border-section;
-    height: 70%;
+    height: calc(100% - 276px);
     min-height: 10%;
     max-height: 90%;
   }
 
   &__right-bottom {
     //border: 1px solid $c-border-section;
-    height: calc(30% - 15px);
-    min-height: calc(10% - 15px);
+    height: 261px;
+    min-height: 261px;
     max-height: calc(90% - 15px);
     overflow: hidden;
   }

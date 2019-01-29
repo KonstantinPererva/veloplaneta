@@ -1,0 +1,73 @@
+.button-order-panel {
+  @extend .button-common;
+  position: relative;
+  border: 0;
+  height: 25px;
+  line-height: 25px;
+  font-size: 11px;
+  background: $c-bg-gray;
+  color: #fff;
+  border-radius: 2px 2px 0 0;
+  margin: 0 3px 0 0;
+  padding: 0 22px;
+
+  &:hover {
+    @media (hover:hover) {
+      color: $c-red;
+    }
+  }
+
+  &.active {
+    background: #fff;
+    color: $c-text;
+
+    &:hover {
+      @media (hover:hover) {
+        background: #fff;
+        color: $c-text;
+      }
+    }
+
+    & .button-order-panel__remove {
+      display: block;
+    }
+  }
+
+  &__remove {
+    @extend .button-common;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 25px;
+    width: 20px;
+    display: none;
+    background: transparent;
+    color: $c-text;
+    border: 0;
+    padding: 0 5px;
+
+    &:hover {
+      @media (hover:hover) {
+        & svg path {
+          fill: $c-red;
+        }
+      }
+    }
+
+    & svg {
+      display: block;
+
+      & path {
+        transition: .15s;
+      }
+    }
+  }
+}
+
+.create-order {
+  @extend .button-order-panel;
+  padding: 0;
+  width: 25px;
+  font-size: 20px;
+}

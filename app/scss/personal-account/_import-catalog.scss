@@ -5,6 +5,13 @@
   background: #207245;
   padding: 0 5px;
 
+  &:hover {
+    @media (hover:hover) {
+      border-color: $c-red;
+      background: #ed888f;
+    }
+  }
+
   & svg {
     display: block;
   }

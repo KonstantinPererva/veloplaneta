@@ -64,7 +64,7 @@
 
                 <div class="catalog-panel__hold">
                     <div class="catalog-panel__voice">
-                        <button class="button button_transparent">
+                        <button class="button-voice">
                             <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6.99982 13.8458C8.05765 13.8458 8.96292 13.4692 9.7161 12.7163C10.4691 11.9635 10.8457 11.0577 10.8457 9.99998V3.84626C10.8457 2.78851 10.4694 1.88316 9.7161 1.1299C8.96292 0.376817 8.05765 0 6.99982 0C5.94212 0 5.03672 0.376817 4.28351 1.1299C3.53025 1.88303 3.15369 2.78851 3.15369 3.84626V9.99998C3.15369 11.0577 3.53042 11.9635 4.28351 12.7163C5.03659 13.4692 5.94212 13.8458 6.99982 13.8458Z" fill="#E30613"/>
                                 <path d="M13.6943 7.92068C13.5425 7.76842 13.3618 7.69226 13.1534 7.69226C12.9453 7.69226 12.765 7.76842 12.6126 7.92068C12.4605 8.07291 12.3844 8.25317 12.3844 8.46143V9.99997C12.3844 11.4824 11.8574 12.7503 10.8037 13.804C9.75034 14.8577 8.48223 15.3846 6.99976 15.3846C5.51733 15.3846 4.24935 14.8577 3.1956 13.804C2.14198 12.7506 1.61521 11.4824 1.61521 9.99997V8.46143C1.61521 8.25317 1.53905 8.07291 1.38687 7.92068C1.2346 7.76842 1.05451 7.69226 0.846038 7.69226C0.63757 7.69226 0.457266 7.76842 0.305083 7.92068C0.152773 8.07291 0.0766602 8.25317 0.0766602 8.46143V9.99997C0.0766602 11.7708 0.667712 13.3113 1.84948 14.6213C3.03129 15.9313 4.49162 16.6824 6.23051 16.8746V18.4613H3.15363C2.94528 18.4613 2.76502 18.5376 2.6128 18.6898C2.46053 18.842 2.38437 19.0223 2.38437 19.2307C2.38437 19.4387 2.46053 19.6193 2.6128 19.7715C2.76502 19.9236 2.94528 20 3.15363 20H10.8457C11.054 20 11.2345 19.9237 11.3865 19.7715C11.5389 19.6194 11.6151 19.4387 11.6151 19.2307C11.6151 19.0224 11.5389 18.842 11.3865 18.6898C11.2345 18.5376 11.054 18.4613 10.8457 18.4613H7.76918V16.8746C9.50777 16.6824 10.968 15.9313 12.1499 14.6213C13.3318 13.3113 13.9231 11.7708 13.9231 9.99997V8.46143C13.9231 8.25321 13.8467 8.07308 13.6943 7.92068Z" fill="#E30613"/>
@@ -87,8 +87,8 @@
                     </div>
 
                     <div class="catalog-panel__button">
-                        <button class="button button_transparent">
-                            <span class="button__text">История</span>
+                        <button class="button-history">
+                            <span class="button-history__text">История</span>
                         </button>
                     </div>
                 </div>
@@ -515,7 +515,9 @@
                             </ul>
 
                             <div class="catalog-list-wrapper__button">
-                                <button class="button button_white"><span class="button__text">Скачать прайс</span></button>
+                                <button class="button-download-price" type="button">
+                                    <span class="button-download-price__text">Скачать прайс</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -531,8 +533,8 @@
                                     <span class="catalog-filter-title__text">Фильтры</span>
                                 </div>
 
-                                <button class="catalog-filter-button-reset">
-                                    <span class="catalog-filter-button-reset__text">сбросить все</span>
+                                <button class="button-reset-filter">
+                                    <span class="button-reset-filter__text">сбросить все</span>
                                 </button>
                             </div>
 
@@ -788,22 +790,38 @@
                         <div class="order">
                             <div class="order-panel">
                                 <div class="order-panel__button-left">
-                                    <button class="order-panel-button">
-                                        <span class="order-panel-button__text">Описание товара</span>
+                                    <button type="button" class="button-order-panel">
+                                        <span class="button-order-panel__text">Описание товара</span>
                                     </button>
 
-                                    <ul class="order-panel-button-list">
-                                        <li class="order-panel-button-list__item">
-                                            <button class="order-panel-button">
-                                                <span class="order-panel-button__text">Заказ O4G21</span>
-                                            </button>
+                                    <ul class="button-order-panel-list">
+                                        <li class="button-order-panel-list__item">
+                                            <div class="button-order-panel active">
+                                                <span class="button-order-panel__text">Заказ O4G21</span>
 
-                                            <button class="order-remove">x</button>
+                                                <button type="button" class="button-order-panel__remove">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                                        <path d="M0.646446 1.35355L8.64642 9.35355L9.35353 8.64644L1.35355 0.646447L0.646446 1.35355ZM8.64645 0.646451L0.646468 8.64645L1.35358 9.35355L9.35355 1.35356L8.64645 0.646451Z" fill="#545454"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </li>
+
+                                        <li class="button-order-panel-list__item">
+                                            <div class="button-order-panel">
+                                                <span class="button-order-panel__text">Заказ O4G21</span>
+
+                                                <button type="button" class="button-order-panel__remove">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                                        <path d="M0.646446 1.35355L8.64642 9.35355L9.35353 8.64644L1.35355 0.646447L0.646446 1.35355ZM8.64645 0.646451L0.646468 8.64645L1.35358 9.35355L9.35355 1.35356L8.64645 0.646451Z" fill="#545454"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
                                         </li>
                                     </ul>
 
-                                    <button class="order-panel-button">
-                                        <span class="order-panel-button__text">+</span>
+                                    <button class="create-order">
+                                        <span class="create-order__text">+</span>
                                     </button>
                                 </div>
 

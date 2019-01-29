@@ -1,4 +1,4 @@
-.catalog-filter-button-reset {
+.button-reset-filter {
   height: 20px;
   font-size: 12px;
   line-height: 12px;
@@ -14,7 +14,6 @@
   &:hover {
     @media (hover: hover) {
       color: $c-red;
-      border-color: $c-red;
       cursor: pointer;
       outline: none;
     }
