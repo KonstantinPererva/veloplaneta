@@ -1,0 +1,39 @@
+.goods-box-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__num {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: $c-red;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: $f-l;
+    margin: 0 13px 0 0;
+  }
+
+  &__text {
+    display: block;
+    font-family: $f-l;
+    font-size: 18px;
+    color: $c-text;
+  }
+
+  &__ico {
+    display: block;
+
+    & svg {
+      display: block;
+    }
+  }
+}

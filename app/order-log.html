@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Велопланета</title>
+    <link rel="stylesheet" href="css/style-I.css">
+    <link rel="stylesheet" href="css/style-personal-account.css">
+    <link rel="stylesheet" href="css/style-detail.css">
+    <link rel="stylesheet" href="css/style-order-log.css">
+</head>
+
+<body>
+<div class="personal-account">
+    <header class="header header-personal-account">
+        <div class="header__row">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="img/logo.svg" alt="logo" />
+                </a>
+            </div>
+
+            <nav>
+                <ul class="menu-list">
+                    <li class="menu-list__item"><a href="#" class="menu-list__link">Каталог</a></li>
+                    <li class="menu-list__item"><a href="#" class="menu-list__link">Журнал заказов</a></li>
+                    <li class="menu-list__item"><a href="#" class="menu-list__link">Взаиморасчеты</a></li>
+                    <li class="menu-list__item"><a href="#" class="menu-list__link active">Рекламации</a></li>
+                    <li class="menu-list__item"><a href="#" class="menu-list__link">Предзаказ</a></li>
+                    <li class="menu-list__item"><a href="#" class="menu-list__link">Новости</a></li>
+                </ul>
+            </nav>
+
+            <div class="info">
+                <div class="info__item">
+                    <span>Курс $: 27.75</span>
+                </div>
+
+                <div class="info__item">
+                    <span>Долг: $9 9999 </span>
+                </div>
+
+                <div class="info__item mail">
+                    <div class="count">2</div>
+
+                    <img src="img/mail.svg" alt="mail" />
+                </div>
+
+                <div class="info__item">
+                    <img src="img/user.svg" alt="user" />
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="personal-account__container">
+        <div class="page">
+            <div class="page-panel">
+                <div class="page-panel__title">
+                    <h2 class="page-title">
+                        <span class="page-title__text">Журнал заказов</span>
+                    </h2>
+                </div>
+
+                <div class="page-panel__hold">
+                    <button type="button" class="button-add-goods">
+                        <span class="button-add-goods__ico">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.84615 0.769231C3.84615 0.344396 4.19055 0 4.61538 0H5.38462C5.80945 0 6.15385 0.344396 6.15385 0.769231V9.23077C6.15385 9.6556 5.80945 10 5.38462 10H4.61538C4.19055 10 3.84615 9.6556 3.84615 9.23077V0.769231Z" fill="#E30613"/>
+                                <path d="M0.769231 6.15385C0.344396 6.15385 0 5.80945 0 5.38462V4.61538C0 4.19055 0.344396 3.84615 0.769231 3.84615H9.23077C9.6556 3.84615 10 4.19055 10 4.61538V5.38462C10 5.80945 9.6556 6.15385 9.23077 6.15385H0.769231Z" fill="#E30613"/>
+                            </svg>
+                        </span>
+
+                        <span class="button-add-goods__text">Добавить товар</span>
+                    </button>
+
+                    <button type="button" class="button-place-an-order">
+                        <span class="button-place-an-order__ico">
+                            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.96941 6.42651C6.96941 7.14499 6.38726 7.72692 5.66922 7.72692H4.78479C4.06674 7.72692 3.4846 7.14499 3.4846 6.42651H0V10.1289C0 10.61 0.390057 11 0.871149 11H9.58264C10.0637 11 10.4538 10.61 10.4538 10.1289V6.42651H6.96941Z" fill="white"/>
+                                <path d="M5.20857 0L3.55164 1.62295C3.38895 1.78259 3.44144 1.91195 3.6699 1.91195H4.6641V5.22689C4.6641 5.52766 4.9078 5.77136 5.20857 5.77136C5.50933 5.77136 5.75303 5.52766 5.75303 5.22689V1.91195H6.74701C6.97591 1.91195 7.02796 1.78237 6.86527 1.62295L5.20857 0Z" fill="white"/>
+                            </svg>
+                        </span>
+
+                        <span class="button-place-an-order__text">Оформить заказ</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="page-grid" data-grid="container">
+                <div class="page-grid__left" data-grid="cell-left">
+                    ***** Table *****
+                </div>
+
+                <div class="page-grid__lever page-grid__lever_vertical" data-grid="lever-horizontal">
+                    <button class="page-grid__button-vertical" data-grid="button-toggle"></button>
+                </div>
+
+                <div class="page-grid__right" data-grid="cell-right">
+                    ***** Table *****
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/personal-account.js"></script>
+<script src="js/test.js"></script>
+</body>
+</html>

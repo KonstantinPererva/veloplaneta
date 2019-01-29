@@ -1,0 +1,18 @@
+.goods-cancellation {
+  @extend .button-common;
+  margin: 0 0 0 5px;
+  background: #E1E1E1;
+  color: #fff;
+  padding: 0 22px;
+
+  &:hover {
+    @media (hover:hover) {
+      color: #fff;
+      background: $c-hover-bg-btn-gray;
+    }
+  }
+
+  &__text {
+    display: block;
+  }
+}

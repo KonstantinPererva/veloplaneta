@@ -1,14 +1,13 @@
-.button-history {
+.goods-add {
   @extend .button-common;
-  border-color: $c-red;
-  padding: 0 16px;
-  background: transparent;
-  color: $c-red;
+  background: $c-red;
+  color: #fff;
+  padding: 0 22px;
 
   &:hover {
     @media (hover:hover) {
       color: #fff;
-      background: $c-red;
+      background: $c-dark-red;
     }
   }
 

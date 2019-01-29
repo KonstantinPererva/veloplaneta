@@ -1,0 +1,54 @@
+.img-small-card {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+  transition: .15;
+
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+      outline: 1px solid $c-red;
+      outline-offset: -1px;
+    }
+  }
+
+  &__img {
+    display: block;
+    height: 100%;
+  }
+
+  &__substrate {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(227,6,19,.5);
+     transition: .15s;
+     z-index: 1;
+
+     &:hover {
+       @media (hover: hover) {
+         cursor: pointer;
+
+         & .img-small-card__more-num {
+           display: block;
+         }
+       }
+     }
+  }
+
+  &__more-num {
+    display: block;
+    font-size: 13px;
+    font-family: $f-l;
+    line-height: 17px;
+    color: #fff;
+  }
+}

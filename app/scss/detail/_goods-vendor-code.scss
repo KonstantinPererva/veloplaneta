@@ -1,0 +1,21 @@
+.goods-vendor-code {
+  margin: 0 0 15px;
+
+  &__title {
+    display: block;
+    font-size: 11px;
+    color: $c-red;
+    line-height: 17px;
+    font-family: $f-l;
+    margin: 0 0 6px;
+  }
+
+  &__num {
+    display: block;
+    height: 17px;
+    font-size: 13px;
+    color: $c-text;
+    line-height: 17px;
+    font-family: $f-l;
+  }
+}

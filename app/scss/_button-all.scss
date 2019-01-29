@@ -1,0 +1,21 @@
+.button-all {
+  font-family: $f-l;
+  text-decoration: none;
+  outline: none;
+  user-select: none;
+  transition: .15s;
+  padding: 0;
+
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+      outline: none;
+      text-decoration: none;
+    }
+  }
+
+  &:focus, &:active {
+    text-decoration: none;
+    outline: none;
+  }
+}

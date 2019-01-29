@@ -1,0 +1,19 @@
+.goods-characteristics {
+  padding: 10px 0 5px;
+
+  &__property {
+    display: block;
+    font-size: 11px;
+    color: $c-red;
+    line-height: 17px;
+    font-family: $f-l;
+  }
+
+  &__value {
+    display: block;
+    font-size: 13px;
+    color: $c-text;
+    line-height: 17px;
+    font-family: $f-l;
+  }
+}
