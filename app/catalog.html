@@ -95,9 +95,9 @@
                 </div>
              </div>
 
-            <div class="page-grid" data-grid="container">
-                <div class="page-grid__left" data-grid="cell-left">
-                    <div class="page-grid__left-top" data-grid="row-top-cell-left">
+            <div class="page-grid" data-grid="catalog-container">
+                <div class="page-grid__left" data-grid="catalog-cell-left">
+                    <div class="page-grid__left-top" data-grid="catalog-row-top-cell-left">
                         <div class="catalog-list-wrapper">
                             <ul class="catalog-list">
                                 <li class="catalog-list__item" data-menu="container">
@@ -523,11 +523,11 @@
                         </div>
                     </div>
 
-                    <div class="page-grid__lever page-grid__lever_horizontal" data-grid="lever-vertical-cell-left">
+                    <div class="page-grid__lever page-grid__lever_horizontal" data-grid="catalog-lever-vertical-cell-left">
                         <button class="page-grid__button-horizontal" data-grid="button-toggle"></button>
                     </div>
 
-                    <div class="page-grid__left-bottom" data-grid="row-bottom-cell-left">
+                    <div class="page-grid__left-bottom" data-grid="catalog-row-bottom-cell-left">
                         <div class="catalog-filter">
                             <div class="catalog-filter__header">
                                 <div class="catalog-filter-title">
@@ -774,20 +774,20 @@
                     </div>
                 </div>
 
-                <div class="page-grid__lever page-grid__lever_vertical" data-grid="lever-horizontal">
+                <div class="page-grid__lever page-grid__lever_vertical" data-grid="catalog-lever-horizontal">
                     <button class="page-grid__button-vertical" data-grid="button-toggle"></button>
                 </div>
 
-                <div class="page-grid__right" data-grid="cell-right">
-                    <div class="page-grid__right-top" data-grid="row-top-cell-right">
+                <div class="page-grid__right" data-grid="catalog-cell-right">
+                    <div class="page-grid__right-top" data-grid="catalog-row-top-cell-right">
                         <div class="catalog-table">******Table*******</div>
                     </div>
 
-                    <div class="page-grid__lever page-grid__lever_horizontal" data-grid="lever-vertical-cell-right">
+                    <div class="page-grid__lever page-grid__lever_horizontal" data-grid="catalog-lever-vertical-cell-right">
                         <button class="page-grid__button-horizontal" data-grid="button-toggle"></button>
                     </div>
 
-                    <div class="page-grid__right-bottom" data-grid="row-bottom-cell-right">
+                    <div class="page-grid__right-bottom" data-grid="catalog-row-bottom-cell-right">
                         <div class="order">
                             <div class="order-panel">
                                 <div class="order-panel__button-left">
@@ -881,7 +881,38 @@
 </div>
 
 <script src="js/personal-account.js"></script>
-<script src="js/resize-box.js"></script>
+<script src="js/test-resize-box.js"></script>
 <script src="js/accordion.js"></script>
+
+<script>
+    (function () {
+        var catalogHorizontalResize = new Resizing({
+            direction: 'horizontal', //'horizontal' or 'vertical'
+            node: '[data-grid="catalog-container"]',
+            btn: '[data-grid="catalog-lever-horizontal"]',
+            boxLeft: '[data-grid="catalog-cell-left"]',
+            boxRight: '[data-grid="catalog-cell-right"]'
+        });
+        catalogHorizontalResize.init();
+
+        var catalogVerticalLeftBoxResize = new Resizing({
+            direction: 'vertical', //'horizontal' or 'vertical'
+            node: '[data-grid="catalog-cell-left"]',
+            btn: '[data-grid="catalog-lever-vertical-cell-left"]',
+            boxTop: '[data-grid="catalog-row-top-cell-left"]',
+            boxBottom: '[data-grid="catalog-row-bottom-cell-left"]'
+        });
+        catalogVerticalLeftBoxResize.init();
+
+        var catalogVerticalRightBoxResize = new Resizing({
+            direction: 'vertical', //'horizontal' or 'vertical'
+            node: '[data-grid="catalog-cell-right"]',
+            btn: '[data-grid="catalog-lever-vertical-cell-right"]',
+            boxTop: '[data-grid="catalog-row-top-cell-right"]',
+            boxBottom: '[data-grid="catalog-row-bottom-cell-right"]'
+        });
+        catalogVerticalRightBoxResize.init();
+    })();
+</script>
 </body>
 </html>

@@ -330,7 +330,8 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
+  height: -webkit-calc(100vh - 117px);
+  height: calc(100vh - 117px);
   overflow: hidden; }
   .page-grid__lever {
     -webkit-flex-shrink: 0;

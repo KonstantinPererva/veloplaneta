@@ -12,29 +12,37 @@ var Resizing = function(opt) {
     }, opt);
 
     var resizeBox = {
-
-        node : node,
-
+        resize: true,
         dragObject: {},
-
         touches: {},
 
-        button : {
-            leverHorizontal : function() { return resizeBox.node.querySelector('[data-grid="lever-horizontal"]') },
-            leverVerticalCellLeft : function() { return resizeBox.node.querySelector('[data-grid="lever-vertical-cell-left"]') },
-            leverVerticalCellRight : function() { return resizeBox.node.querySelector('[data-grid="lever-vertical-cell-right"]') },
-            buttonHorizontal : function() { return resizeBox.button.leverHorizontal().querySelector('[data-grid="button-toggle"]') },
-            buttonVerticalCellLeft : function() { return resizeBox.button.leverVerticalCellLeft().querySelector('[data-grid="button-toggle"]') },
-            buttonVerticalCellRight : function() { return resizeBox.button.leverVerticalCellRight().querySelector('[data-grid="button-toggle"]') }
+        node: function () {
+            if (!resizeBox.resize) return;
+            return document.querySelector(option.node) || null;
         },
 
-        box : {
-            cellLeft : function() { return resizeBox.node.querySelector('[data-grid="cell-left"]') },
-            cellRight : function() { return resizeBox.node.querySelector('[data-grid="cell-right"]') },
-            rowTopCellLeft : function() { return resizeBox.node.querySelector('[data-grid="row-top-cell-left"]') },
-            rowBottomCellLeft : function() { return resizeBox.node.querySelector('[data-grid="row-bottom-cell-left"]') },
-            rowTopCellRight : function() { return resizeBox.node.querySelector('[data-grid="row-top-cell-right"]') },
-            rowBottomCellRight : function() { return resizeBox.node.querySelector('[data-grid="row-bottom-cell-right"]') }
+        btn: function () {
+            if (!resizeBox.resize) return;
+            return resizeBox.node().querySelector(option.btn) || null;
+        },
+
+        boxLeft: function () {
+            if (!resizeBox.resize) return;
+            return resizeBox.node().querySelector(option.boxLeft) || null;
+        },
+
+        boxRight: function () {
+            if (!resizeBox.resize) return;
+            return resizeBox.node().querySelector(option.boxRight) || null;
+        },
+
+        boxTop: function () {
+            if (!resizeBox.resize) return;
+            return resizeBox.node().querySelector(option.boxTop) || null;
+        },
+
+        boxBottom: function () {
+            return resizeBox.node().querySelector(option.boxBottom);
         },
 
         getSizeBoxes : function (elem){
@@ -48,18 +56,17 @@ var Resizing = function(opt) {
         },
 
         setSizeBoxes : function() {
-            resizeBox.box.cellLeft().style.width = resizeBox.getSizeBoxes(resizeBox.box.cellLeft()).width + 'px';
-            resizeBox.box.cellRight().style.width = resizeBox.getSizeBoxes(resizeBox.box.cellRight()).width + 'px';
+            if (option.direction === 'horizontal') {
+                resizeBox.boxLeft().style.width = resizeBox.getSizeBoxes(resizeBox.boxLeft()).width + 'px';
+                resizeBox.boxRight().style.width = resizeBox.getSizeBoxes(resizeBox.boxRight()).width + 'px';
 
-            resizeBox.box.rowTopCellLeft().style.height = resizeBox.getSizeBoxes(resizeBox.box.rowTopCellLeft()).height + 'px';
-            resizeBox.box.rowBottomCellLeft().style.height = resizeBox.getSizeBoxes(resizeBox.box.rowBottomCellLeft()).height + 'px';
+                return
+            }
 
-            resizeBox.box.rowTopCellRight().style.height = resizeBox.getSizeBoxes(resizeBox.box.rowTopCellRight()).height + 'px';
-            resizeBox.box.rowBottomCellRight().style.height = resizeBox.getSizeBoxes(resizeBox.box.rowBottomCellRight()).height + 'px';
-        },
-
-        setSizeNode : function () {
-            resizeBox.node.style.height = document.documentElement.clientHeight - 117 + 'px';
+            if (option.direction === 'vertical') {
+                resizeBox.boxTop().style.height = resizeBox.getSizeBoxes(resizeBox.boxTop()).height + 'px';
+                resizeBox.boxBottom().style.height = resizeBox.getSizeBoxes(resizeBox.boxBottom()).height + 'px';
+            }
         },
 
         lever : function(e) {
@@ -67,123 +74,92 @@ var Resizing = function(opt) {
 
             var elem = e.target;
 
-            if (elem === resizeBox.button.leverHorizontal()) {
+            if (option.direction === 'horizontal' && elem === resizeBox.btn()) {
+                resizeBox.setSizeBoxes();
+
                 resizeBox.dragObject = {};
 
                 resizeBox.dragObject.elem = elem;
 
                 resizeBox.dragObject.downX = e.pageX;
 
-                resizeBox.setSizeBoxes();
-
-                document.body.addEventListener('mousemove', resizeBox.resizeBoxX);
+                document.body.addEventListener('mousemove', resizeBox.resizeX);
 
                 return;
             }
 
-            if (elem === resizeBox.button.leverVerticalCellLeft()) {
+            if (option.direction === 'vertical' && elem === resizeBox.btn()) {
                 resizeBox.dragObject = {};
 
                 resizeBox.dragObject.elem = elem;
 
                 resizeBox.dragObject.downY = e.pageY;
 
-                resizeBox.setSizeBoxes();
-
-                document.body.addEventListener('mousemove', resizeBox.resizeBoxYLeft);
-
-                return;
+                document.body.addEventListener('mousemove', resizeBox.resizeY);
             }
 
-            if (elem === resizeBox.button.leverVerticalCellRight()) {
-                resizeBox.dragObject = {};
-
-                resizeBox.dragObject.elem = elem;
-
-                resizeBox.dragObject.downY = e.pageY;
-
-                resizeBox.setSizeBoxes();
-
-                document.body.addEventListener('mousemove', resizeBox.resizeBoxYRight);
-
-                return;
-            }
-
-            if (elem === resizeBox.button.buttonHorizontal()) {
-                resizeBox.box.cellLeft().classList.toggle('page-grid__cell-hidden');
-
-                resizeBox.box.cellRight().classList.toggle('page-grid__cell-full');
-
-                return;
-            }
-
-            if (elem === resizeBox.button.buttonVerticalCellLeft())  {
-                resizeBox.box.rowTopCellLeft().classList.toggle('page-grid__row-full');
-
-                resizeBox.box.rowBottomCellLeft().classList.toggle('page-grid__row-hidden');
-
-                return;
-            }
-
-            if (elem === resizeBox.button.buttonVerticalCellRight()) {
-                resizeBox.box.rowTopCellRight().classList.toggle('page-grid__row-full');
-
-                resizeBox.box.rowBottomCellRight().classList.toggle('page-grid__row-hidden');
-            }
+            //click btn
+            // if (elem === resizeBox.button.buttonHorizontal()) {
+            //     resizeBox.box.cellLeft().classList.toggle('page-grid__cell-hidden');
+            //
+            //     resizeBox.box.cellRight().classList.toggle('page-grid__cell-full');
+            //
+            //     return;
+            // }
+            //
+            // if (elem === resizeBox.button.buttonVerticalCellLeft())  {
+            //     resizeBox.box.rowTopCellLeft().classList.toggle('page-grid__row-full');
+            //
+            //     resizeBox.box.rowBottomCellLeft().classList.toggle('page-grid__row-hidden');
+            //
+            //     return;
+            // }
+            //
+            // if (elem === resizeBox.button.buttonVerticalCellRight()) {
+            //     resizeBox.box.rowTopCellRight().classList.toggle('page-grid__row-full');
+            //
+            //     resizeBox.box.rowBottomCellRight().classList.toggle('page-grid__row-hidden');
+            // }
         },
 
         addBodyListenerMousedown : function () {
-            document.body.addEventListener( 'mousedown', resizeBox.lever );
+            return document.body.addEventListener( 'mousedown', resizeBox.lever );
         },
 
         addBodyListenerMouseup : function () {
-            document.body.addEventListener( 'mouseup', resizeBox.reset );
-
-            document.body.addEventListener( 'touchend', resizeBox.reset );
+            return document.body.addEventListener( 'mouseup', resizeBox.reset );
         },
 
-        resizeBoxX: function(e) {
+        resizeX: function(e) {
             if (!resizeBox.dragObject.elem) return; // элемент не зажат
 
             var moveX = e.pageX - resizeBox.dragObject.downX;
 
-            resizeBox.box.cellLeft().style.width = parseInt(resizeBox.box.cellLeft().style.width) + moveX + 'px';
-
-            resizeBox.box.cellRight().style.width = parseInt(resizeBox.box.cellRight().style.width) - moveX + 'px';
-
             resizeBox.dragObject.downX += moveX;
+
+            resizeBox.boxLeft().style.width = parseInt(resizeBox.boxLeft().style.width) + moveX + 'px';
+
+            resizeBox.boxRight().style.width = parseInt(resizeBox.boxRight().style.width) - moveX + 'px';
         },
 
-        resizeBoxYLeft: function(e) {
+        resizeY: function(e) {
             if (!resizeBox.dragObject.elem) return; // элемент не зажат
 
             var moveY = e.pageY - resizeBox.dragObject.downY;
 
-            resizeBox.box.rowTopCellLeft().style.height = parseInt(resizeBox.box.rowTopCellLeft().style.height) + moveY + 'px';
-
-            resizeBox.box.rowBottomCellLeft().style.height = parseInt(resizeBox.box.rowBottomCellLeft().style.height) - moveY + 'px';
-
             resizeBox.dragObject.downY += moveY;
-        },
 
-        resizeBoxYRight: function(e) {
-            if (!resizeBox.dragObject.elem) return; // элемент не зажат
+            resizeBox.boxTop().style.height = resizeBox.getSizeBoxes(resizeBox.boxTop()).height + moveY + 'px';
 
-            var moveY = e.pageY - resizeBox.dragObject.downY;
-
-            resizeBox.box.rowTopCellRight().style.height = parseInt(resizeBox.box.rowTopCellRight().style.height) + moveY + 'px';
-
-            resizeBox.box.rowBottomCellRight().style.height = parseInt(resizeBox.box.rowBottomCellRight().style.height) - moveY + 'px';
-
-            resizeBox.dragObject.downY += moveY;
+            resizeBox.boxBottom().style.height = resizeBox.getSizeBoxes(resizeBox.boxBottom()).height  - moveY + 'px';
         },
 
         removeBodyListenerMousemove: function () {
-            document.body.removeEventListener('mousemove', resizeBox.resizeBoxX);
+            document.body.removeEventListener('mousemove', resizeBox.resizeX);
 
-            document.body.removeEventListener('mousemove', resizeBox.resizeBoxYLeft);
+            document.body.removeEventListener('mousemove', resizeBox.resizeY);
 
-            document.body.removeEventListener('mousemove', resizeBox.resizeBoxYRight);
+            document.body.removeEventListener('mouseup', resizeBox.reset);
         },
 
         reset : function () {
@@ -193,18 +169,20 @@ var Resizing = function(opt) {
         },
 
         resetHideBox : function () {
-            resizeBox.box.rowTopCellLeft().style.height = '';
-            resizeBox.box.rowBottomCellLeft().style.height = '';
-            resizeBox.box.rowTopCellRight().style.height = '';
-            resizeBox.box.rowBottomCellRight().style.height = '';
+            if(option.direction === 'horizontal') {
+                resizeBox.boxLeft().style.width = '';
+                resizeBox.boxRight().style.width = '';
+            }
+
+            if(option.direction === 'vertical') {
+                resizeBox.boxTop().style.height = '';
+                resizeBox.boxBottom().style.height = '';
+            }
+
         },
 
         windowResize : function () {
-            window.addEventListener('resize', function() {
-                resizeBox.setSizeNode();
-
-                resizeBox.resetHideBox();
-            });
+            window.addEventListener('resize', resizeBox.resetHideBox);
         },
 
         //Touch.............................
@@ -223,16 +201,11 @@ var Resizing = function(opt) {
 
             resizeBox.dragObject.downY = resizeBox.touches[0].pageY;
 
-            var x = Math.round(resizeBox.touches[0].pageX);
-            var y = Math.round(resizeBox.touches[0].pageY);
-
-            resizeBox.setSizeBoxes();
-
             resizeBox.addBodyListenerTouchMove();
 
             resizeBox.addBodyListenerTouchEnd();
 
-            resizeBox.removeBodyListenerMousemove();
+            // resizeBox.removeBodyListenerMousemove();
         },
 
         touchMove : function (e) {
@@ -314,19 +287,20 @@ var Resizing = function(opt) {
 
             resizeBox.addBodyListenerMouseup();
 
-            resizeBox.setSizeNode();
-
             resizeBox.windowResize();
 
             resizeBox.addBodyListenerTouchStart();
+        },
+
+        unresize: function () {
+            resizeBox.resize = false;
+            resizeBox.init();
         }
     };
 
     return {
+        unresize: resizeBox.unresize,
+
         init: resizeBox.init
     }
 };
-
-
-var catalog = new Resizing(document.querySelector('[data-grid="container"]'));
-catalog.init();

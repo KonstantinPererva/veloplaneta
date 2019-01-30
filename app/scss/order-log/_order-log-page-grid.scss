@@ -1,0 +1,90 @@
+.order-log-page-grid {
+  display: flex;
+  height: calc(100vh - 117px);
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  &__lever {
+    flex-shrink: 0;
+    position: relative;
+    user-select: none;
+    outline: none;
+    touch-action: none;
+
+    &:hover {
+      @media (hover: hover) {
+        &_horizontal {
+          cursor: col-resize;
+        }
+
+        &_vertical {
+          cursor: row-resize;
+        }
+
+        &:after {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &_vertical {
+      width: 20px;
+
+      &:hover {
+        @media (hover: hover) {
+          cursor: col-resize;
+        }
+      }
+    }
+  }
+
+  &__left {
+    flex-shrink: 0;
+    width: 616px;
+    min-width: 616px;
+    max-width: calc(100% - 320px);
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  &__right {
+    flex-grow: 1;
+    width: calc(100% - 636px);
+    min-width: 300px;
+    max-width: calc(100% - 636px);
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__button-vertical {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 5px;
+    height: 56px;
+    border: 0;
+    background: transparent;
+    border-left: 1px solid $c-border;
+    border-right: 1px solid $c-border;
+    padding: 0;
+    z-index: 1;
+    user-select: none;
+    outline: none;
+
+    &:focus, &:active {
+      outline: none;
+    }
+
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+}

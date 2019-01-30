@@ -1,0 +1,25 @@
+.order-log-select {
+  display: block;
+  height: 22px;
+  width: 100px;
+  border: 1px solid $c-border;
+  border-radius: 2px;
+  font-size: 12px;
+  font-family: $f-l;
+
+  & ul {
+    display: none;
+  }
+
+  & input::-webkit-calendar-picker-indicator {
+    opacity: 1;
+  }
+
+  &__date-first, &__date-last {
+    background: transparent;
+    border: 0;
+    font-size: 12px;
+    font-family: $f-l;
+    height: 20px;
+  }
+}

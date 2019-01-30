@@ -1,0 +1,33 @@
+.order-price {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+
+  &__title {
+    font-size: 13px;
+    font-family: $f-l;
+    color: $c-gray-title;
+    line-height: 16px;
+    margin: 0 10px 0 0;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+
+  &__num {
+    font-size: 16px;
+    font-family: $f-l;
+    color: $c-text;
+    line-height: 16px;
+    margin: 0 7px 0 0;
+  }
+
+  &__cur {
+    font-size: 16px;
+    font-family: $f-l;
+    color: $c-text;
+    line-height: 16px;
+  }
+}

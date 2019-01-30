@@ -89,16 +89,90 @@
                 </div>
             </div>
 
-            <div class="page-grid" data-grid="container">
-                <div class="page-grid__left" data-grid="cell-left">
-                    ***** Table *****
+            <div class="order-log-page-grid" data-grid="order-log-container">
+                <div class="order-log-page-grid__left" data-grid="order-log-cell-left">
+                    <div class="order-log-panel">
+                        <div class="order-log-switch">
+                            <label for="order" class="order-log-switch__item">
+                                <input type="radio" id="order" name="switch" value="order" class="order-log-switch__input" checked />
+
+                                <span class="order-log-switch__button order-log-switch__button_left">
+                                    <span>Заказы</span>
+                                </span>
+                            </label>
+
+                            <label for="preOrder" class="order-log-switch__item">
+                                <input type="radio" id="preOrder" name="switch" value="pre-order" class="order-log-switch__input" />
+
+                                <span class="order-log-switch__button order-log-switch__button_right">
+                                    <span>Предзаказы</span>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="order-log-select">
+                            <span class="order-log-select__text">Все</span>
+
+                            <ul class="order-log-select-list">
+                                <li class="order-log-select-list__item">
+                                    <span class="order-log-select__text">Все</span>
+                                </li>
+
+                                <li class="order-log-select-list__item">
+                                    <span class="order-log-select__text">Item 1</span>
+                                </li>
+
+                                <li class="order-log-select-list__item">
+                                    <span class="order-log-select__text">Item 2</span>
+                                </li>
+
+                                <li class="order-log-select-list__item">
+                                    <span class="order-log-select__text">Item 3</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="order-log-select">
+                            <span class="order-log-select__text">Действия</span>
+
+                            <ul class="order-log-select-list">
+                                <li class="order-log-select-list__item">
+                                    <span class="order-log-select__text">Действия</span>
+                                </li>
+
+                                <li class="order-log-select-list__item">
+                                    <span class="order-log-select__text">Item 1</span>
+                                </li>
+
+                                <li class="order-log-select-list__item">
+                                    <span class="order-log-select__text">Item 2</span>
+                                </li>
+
+                                <li class="order-log-select-list__item">
+                                    <span class="order-log-select__text">Item 3</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="order-log-select">
+                            <input type="date" id="dateFirst" class="order-log-select__date-first" value="2019-01-25">
+                        </div>
+
+                        <div class="order-log-select">
+                            <input type="date" class="order-log-select__date-last" value="2019-01-25">
+                        </div>
+                    </div>
+
+                    <div class="order-log-table">
+                        ***** Table *****
+                    </div>
                 </div>
 
-                <div class="page-grid__lever page-grid__lever_vertical" data-grid="lever-horizontal">
+                <div class="order-log-page-grid__lever order-log-page-grid__lever_vertical" data-grid="order-log-lever-horizontal">
                     <button class="page-grid__button-vertical" data-grid="button-toggle"></button>
                 </div>
 
-                <div class="page-grid__right" data-grid="cell-right">
+                <div class="order-log-page-grid__right" data-grid="order-log-cell-right">
                     <div class="">***** Table *****</div>
 
                     <div class="order-detail">
@@ -120,7 +194,153 @@
                         </div>
 
                         <div class="order-detail__body">
+                            <div class="order-detail__body-left">
+                                <div class="user-data">
+                                    <ul class="user-data-list">
+                                        <li class="user-data-list__item">
+                                            <div class="user-data-card">
+                                                <span class="user-data-card__title">Фамилия получателя:</span>
 
+                                                <span class="user-data-card__value">Иванов</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="user-data-list__item">
+                                            <div class="user-data-card">
+                                                <span class="user-data-card__title">Имя получателя:</span>
+
+                                                <span class="user-data-card__value">Иван</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="user-data-list__item">
+                                            <div class="user-data-card">
+                                                <span class="user-data-card__title">Отчество получателя:</span>
+
+                                                <span class="user-data-card__value">Иванович</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="user-data-list__item">
+                                            <div class="user-data-card">
+                                                <span class="user-data-card__title">Телефон получателя:</span>
+
+                                                <span class="user-data-card__value">+38 (099) 123 45 67</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="user-data-list__item">
+                                            <div class="user-data-card">
+                                                <span class="user-data-card__title">Плательщик Наложенного платежа:</span>
+
+                                                <span class="user-data-card__value">Иванов И.И.</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="user-data-list__item">
+                                            <div class="user-data-card">
+                                                <span class="user-data-card__title">Отделение:</span>
+
+                                                <span class="user-data-card__value">№52 г. Харьков</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="user-data-list__item">
+                                            <div class="user-data-card">
+                                                <span class="user-data-card__title">Наложенный платеж:</span>
+
+                                                <span class="user-data-card__value">Есть</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="user-data-list__item">
+                                            <div class="user-data-card">
+                                                <span class="user-data-card__title">Плательщик обр. доставки:</span>
+
+                                                <span class="user-data-card__value">Иванов И. И.</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="user-data-list__item">
+                                            <div class="user-data-card">
+                                                <span class="user-data-card__title">Сумма обр. доставки:</span>
+
+                                                <span class="user-data-card__value">31 566 uah</span>
+                                            </div>
+                                        </li>
+
+                                        <li class="user-data-list__item">
+                                            <div class="user-data-card">
+                                                <span class="user-data-card__title">Сумма страховки:</span>
+
+                                                <span class="user-data-card__value">30 000 uah</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="order-detail__body-right">
+                                <div class="user-data">
+                                    <div class="user-data__document">
+                                        <div class="user-data-card">
+                                            <span class="user-data-card__title">Документ реализации:</span>
+
+                                            <ul class="user-document-list">
+                                                <li class="user-document-list__item">
+                                                    <div class="user-document-card">
+                                                        <span class="user-document-card__ico-wrap">
+                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.54119 1.13199H8.24879V8.31558C8.24879 8.79281 7.86032 9.18127 7.3831 9.18127H4.42047H2.06458V9.44756C2.06458 9.7525 2.31207 9.99998 2.617 9.99998H5.57857H8.54015C8.84508 9.99998 9.09256 9.7525 9.09256 9.44756V1.68441C9.09257 1.37948 8.84612 1.13199 8.54119 1.13199Z" fill="#898989"/>
+                                                                <path d="M4.42042 8.86799H7.382C7.68693 8.86799 7.93442 8.62051 7.93442 8.31559V1.132V0.552423C7.93442 0.247494 7.68693 0 7.382 0H4.42042H3.43567V0.182749C3.43775 0.201546 3.4388 0.221387 3.4388 0.241228V1.44528V1.75439C3.4388 2.18358 3.09001 2.53237 2.66081 2.53237H2.35171H1.14765C1.13199 2.53237 1.11528 2.53133 1.09962 2.53028H0.907471V8.31559C0.907471 8.62051 1.15496 8.86799 1.45989 8.86799H2.06558H4.42042ZM4.53216 6.99039H2.60129C2.45718 6.99039 2.34022 6.87342 2.34022 6.72932C2.34022 6.5852 2.45718 6.46825 2.60129 6.46825H4.53321C4.67732 6.46825 4.79428 6.5852 4.79428 6.72932C4.79428 6.87342 4.67627 6.99039 4.53216 6.99039ZM6.46408 5.65791H2.60129C2.45718 5.65791 2.34022 5.54094 2.34022 5.39684C2.34022 5.25272 2.45718 5.13577 2.60129 5.13577H6.46408C6.60819 5.13577 6.72515 5.25272 6.72515 5.39684C6.72515 5.54094 6.60819 5.65791 6.46408 5.65791ZM2.60129 3.72076H6.46408C6.60819 3.72076 6.72515 3.83772 6.72515 3.98183C6.72515 4.12594 6.60819 4.2429 6.46408 4.2429H2.60129C2.45718 4.2429 2.34022 4.12594 2.34022 3.98183C2.34022 3.83772 2.45718 3.72076 2.60129 3.72076Z" fill="#898989"/>
+                                                                <path d="M1.1486 2.22004H2.66175C2.6628 2.22004 2.66489 2.22004 2.66593 2.22004C2.91865 2.21795 3.12332 2.01328 3.12541 1.76056C3.12541 1.75952 3.12541 1.75743 3.12541 1.75638V0.242182C3.12541 0.102249 3.01054 0.00930786 2.89151 0.00930786C2.83407 0.00930786 2.77664 0.0301934 2.7286 0.0782302L0.983603 1.82322C0.837405 1.96942 0.940788 2.22004 1.1486 2.22004Z" fill="#898989"/>
+                                                            </svg>
+                                                        </span>
+
+                                                        <span class="user-document-card__name">Document_25.02.19Document_25.02.19Document_25.02.19</span>
+                                                    </div>
+                                                </li>
+
+                                                <li class="user-document-list__item">
+                                                    <div class="user-document-card">
+                                                        <span class="user-document-card__ico-wrap">
+                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.54119 1.13199H8.24879V8.31558C8.24879 8.79281 7.86032 9.18127 7.3831 9.18127H4.42047H2.06458V9.44756C2.06458 9.7525 2.31207 9.99998 2.617 9.99998H5.57857H8.54015C8.84508 9.99998 9.09256 9.7525 9.09256 9.44756V1.68441C9.09257 1.37948 8.84612 1.13199 8.54119 1.13199Z" fill="#898989"/>
+                                                                <path d="M4.42042 8.86799H7.382C7.68693 8.86799 7.93442 8.62051 7.93442 8.31559V1.132V0.552423C7.93442 0.247494 7.68693 0 7.382 0H4.42042H3.43567V0.182749C3.43775 0.201546 3.4388 0.221387 3.4388 0.241228V1.44528V1.75439C3.4388 2.18358 3.09001 2.53237 2.66081 2.53237H2.35171H1.14765C1.13199 2.53237 1.11528 2.53133 1.09962 2.53028H0.907471V8.31559C0.907471 8.62051 1.15496 8.86799 1.45989 8.86799H2.06558H4.42042ZM4.53216 6.99039H2.60129C2.45718 6.99039 2.34022 6.87342 2.34022 6.72932C2.34022 6.5852 2.45718 6.46825 2.60129 6.46825H4.53321C4.67732 6.46825 4.79428 6.5852 4.79428 6.72932C4.79428 6.87342 4.67627 6.99039 4.53216 6.99039ZM6.46408 5.65791H2.60129C2.45718 5.65791 2.34022 5.54094 2.34022 5.39684C2.34022 5.25272 2.45718 5.13577 2.60129 5.13577H6.46408C6.60819 5.13577 6.72515 5.25272 6.72515 5.39684C6.72515 5.54094 6.60819 5.65791 6.46408 5.65791ZM2.60129 3.72076H6.46408C6.60819 3.72076 6.72515 3.83772 6.72515 3.98183C6.72515 4.12594 6.60819 4.2429 6.46408 4.2429H2.60129C2.45718 4.2429 2.34022 4.12594 2.34022 3.98183C2.34022 3.83772 2.45718 3.72076 2.60129 3.72076Z" fill="#898989"/>
+                                                                <path d="M1.1486 2.22004H2.66175C2.6628 2.22004 2.66489 2.22004 2.66593 2.22004C2.91865 2.21795 3.12332 2.01328 3.12541 1.76056C3.12541 1.75952 3.12541 1.75743 3.12541 1.75638V0.242182C3.12541 0.102249 3.01054 0.00930786 2.89151 0.00930786C2.83407 0.00930786 2.77664 0.0301934 2.7286 0.0782302L0.983603 1.82322C0.837405 1.96942 0.940788 2.22004 1.1486 2.22004Z" fill="#898989"/>
+                                                            </svg>
+                                                        </span>
+
+                                                        <span class="user-document-card__name">Document_25.02.19</span>
+                                                    </div>
+                                                </li>
+
+                                                <li class="user-document-list__item">
+                                                    <div class="user-document-card">
+                                                        <span class="user-document-card__ico-wrap">
+                                                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M8.54119 1.13199H8.24879V8.31558C8.24879 8.79281 7.86032 9.18127 7.3831 9.18127H4.42047H2.06458V9.44756C2.06458 9.7525 2.31207 9.99998 2.617 9.99998H5.57857H8.54015C8.84508 9.99998 9.09256 9.7525 9.09256 9.44756V1.68441C9.09257 1.37948 8.84612 1.13199 8.54119 1.13199Z" fill="#898989"/>
+                                                                <path d="M4.42042 8.86799H7.382C7.68693 8.86799 7.93442 8.62051 7.93442 8.31559V1.132V0.552423C7.93442 0.247494 7.68693 0 7.382 0H4.42042H3.43567V0.182749C3.43775 0.201546 3.4388 0.221387 3.4388 0.241228V1.44528V1.75439C3.4388 2.18358 3.09001 2.53237 2.66081 2.53237H2.35171H1.14765C1.13199 2.53237 1.11528 2.53133 1.09962 2.53028H0.907471V8.31559C0.907471 8.62051 1.15496 8.86799 1.45989 8.86799H2.06558H4.42042ZM4.53216 6.99039H2.60129C2.45718 6.99039 2.34022 6.87342 2.34022 6.72932C2.34022 6.5852 2.45718 6.46825 2.60129 6.46825H4.53321C4.67732 6.46825 4.79428 6.5852 4.79428 6.72932C4.79428 6.87342 4.67627 6.99039 4.53216 6.99039ZM6.46408 5.65791H2.60129C2.45718 5.65791 2.34022 5.54094 2.34022 5.39684C2.34022 5.25272 2.45718 5.13577 2.60129 5.13577H6.46408C6.60819 5.13577 6.72515 5.25272 6.72515 5.39684C6.72515 5.54094 6.60819 5.65791 6.46408 5.65791ZM2.60129 3.72076H6.46408C6.60819 3.72076 6.72515 3.83772 6.72515 3.98183C6.72515 4.12594 6.60819 4.2429 6.46408 4.2429H2.60129C2.45718 4.2429 2.34022 4.12594 2.34022 3.98183C2.34022 3.83772 2.45718 3.72076 2.60129 3.72076Z" fill="#898989"/>
+                                                                <path d="M1.1486 2.22004H2.66175C2.6628 2.22004 2.66489 2.22004 2.66593 2.22004C2.91865 2.21795 3.12332 2.01328 3.12541 1.76056C3.12541 1.75952 3.12541 1.75743 3.12541 1.75638V0.242182C3.12541 0.102249 3.01054 0.00930786 2.89151 0.00930786C2.83407 0.00930786 2.77664 0.0301934 2.7286 0.0782302L0.983603 1.82322C0.837405 1.96942 0.940788 2.22004 1.1486 2.22004Z" fill="#898989"/>
+                                                            </svg>
+                                                        </span>
+
+                                                        <span class="user-document-card__name">Document_25.02.19</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="user-data__comment">
+                                        <div class="user-data-card">
+                                            <span class="user-data-card__title">Комментарий:</span>
+
+                                            <span class="user-data-card__value">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,6 +350,20 @@
 </div>
 
 <script src="js/personal-account.js"></script>
-<script src="js/test.js"></script>
+<script src="js/test-resize-box.js"></script>
+
+<script>
+    (function () {
+        var orderLogHorizontalResize = new Resizing({
+            direction: 'horizontal', //'horizontal' or 'vertical'
+            node: '[data-grid="order-log-container"]',
+            btn: '[data-grid="order-log-lever-horizontal"]',
+            boxLeft: '[data-grid="order-log-cell-left"]',
+            boxRight: '[data-grid="order-log-cell-right"]'
+        });
+        orderLogHorizontalResize.init();
+        orderLogHorizontalResize.unresize();
+    })();
+</script>
 </body>
 </html>
