@@ -889,7 +889,9 @@
         var catalogHorizontalResize = new Resizing({
             direction: 'horizontal', //'horizontal' or 'vertical'
             node: '[data-grid="catalog-container"]',
-            btn: '[data-grid="catalog-lever-horizontal"]',
+            lever: '[data-grid="catalog-lever-horizontal"]',
+            button: '[data-grid="button-toggle"]',
+            hide: 'left',
             boxLeft: '[data-grid="catalog-cell-left"]',
             boxRight: '[data-grid="catalog-cell-right"]'
         });
@@ -898,7 +900,9 @@
         var catalogVerticalLeftBoxResize = new Resizing({
             direction: 'vertical', //'horizontal' or 'vertical'
             node: '[data-grid="catalog-cell-left"]',
-            btn: '[data-grid="catalog-lever-vertical-cell-left"]',
+            lever: '[data-grid="catalog-lever-vertical-cell-left"]',
+            button: '[data-grid="button-toggle"]',
+            hide: 'bottom',
             boxTop: '[data-grid="catalog-row-top-cell-left"]',
             boxBottom: '[data-grid="catalog-row-bottom-cell-left"]'
         });
@@ -907,7 +911,9 @@
         var catalogVerticalRightBoxResize = new Resizing({
             direction: 'vertical', //'horizontal' or 'vertical'
             node: '[data-grid="catalog-cell-right"]',
-            btn: '[data-grid="catalog-lever-vertical-cell-right"]',
+            lever: '[data-grid="catalog-lever-vertical-cell-right"]',
+            button: '[data-grid="button-toggle"]',
+            hide: 'bottom',
             boxTop: '[data-grid="catalog-row-top-cell-right"]',
             boxBottom: '[data-grid="catalog-row-bottom-cell-right"]'
         });

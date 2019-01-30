@@ -28,7 +28,7 @@
     }
 
     &_vertical {
-      width: 20px;
+      width: 15px;
 
       &:hover {
         @media (hover: hover) {
@@ -42,7 +42,7 @@
     flex-shrink: 0;
     width: 616px;
     min-width: 616px;
-    max-width: calc(100% - 320px);
+    max-width: calc(100% - 315px);
     height: 100%;
     overflow: hidden;
     background: #fff;
@@ -50,9 +50,9 @@
 
   &__right {
     flex-grow: 1;
-    width: calc(100% - 636px);
+    width: calc(100% - 631px);
     min-width: 300px;
-    max-width: calc(100% - 636px);
+    max-width: calc(100% - 631px);
     height: 100%;
     overflow: hidden;
   }

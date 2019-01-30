@@ -353,17 +353,21 @@
 <script src="js/test-resize-box.js"></script>
 
 <script>
-    (function () {
         var orderLogHorizontalResize = new Resizing({
             direction: 'horizontal', //'horizontal' or 'vertical'
             node: '[data-grid="order-log-container"]',
-            btn: '[data-grid="order-log-lever-horizontal"]',
+            lever: '[data-grid="order-log-lever-horizontal"]',
+            button: '[data-grid="button-toggle"]',
+            hide: 'right',
             boxLeft: '[data-grid="order-log-cell-left"]',
             boxRight: '[data-grid="order-log-cell-right"]'
         });
+
         orderLogHorizontalResize.init();
-        orderLogHorizontalResize.unresize();
-    })();
+
+        document.querySelector('.button-add-goods').addEventListener('click', function () {
+            orderLogHorizontalResize.unresize();
+        });
 </script>
 </body>
 </html>
