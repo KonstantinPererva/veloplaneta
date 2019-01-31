@@ -1,0 +1,33 @@
+.button-description-goods {
+  @extend .button-common;
+  line-height: 17px;
+  font-size: 11px;
+  border-radius: 0;
+  height: 29px;
+  padding: 0 18px;
+  background: $c-bg-gray;
+  border: 1px solid $c-bg-gray;
+  color: #fff;
+  margin: 0 3px 0 0;
+  border-bottom: 0;
+
+  &:hover {
+    @media (hover:hover) {
+      background: $c-hover-bg-btn-gray;
+      border-color: $c-hover-bg-btn-gray;
+    }
+  }
+
+  &.active {
+    background: #fff;
+    color: $c-text;
+    border-color: $c-border-light;
+
+    &:hover {
+      @media (hover:hover) {
+        background: #fff;
+        color: $c-text;
+      }
+    }
+  }
+}

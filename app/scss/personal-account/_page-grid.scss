@@ -58,14 +58,12 @@
   }
 
   &__left-top {
-    //border: 1px solid $c-border-section;
     height: 60%;
     min-height: 10%;
     max-height: 90%;
   }
 
   &__left-bottom {
-    //border: 1px solid $c-border-section;
     height: calc(40% - 15px);
     min-height: calc(10% - 15px);
     max-height: calc(90% - 15px);
@@ -78,16 +76,16 @@
   }
 
   &__right-top {
-    //border: 1px solid $c-border-section;
     height: calc(100% - 276px);
     min-height: 10%;
     max-height: 90%;
   }
 
   &__right-bottom {
-    //border: 1px solid $c-border-section;
+    display: flex;
+    flex-direction: column;
     height: 261px;
-    min-height: 261px;
+    min-height: 100px;
     max-height: calc(90% - 15px);
     overflow: hidden;
   }

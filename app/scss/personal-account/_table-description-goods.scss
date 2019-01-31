@@ -1,0 +1,31 @@
+.table-description-goods {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__row {
+    &:first-child {
+      & td {
+        border-top: 0;
+      }
+    }
+  }
+
+  &__cell {
+    height: 29px;
+    border: 1px solid $c-border-light;
+    padding: 0 8px;
+    vertical-align: middle;
+    font-size: 11px;
+    color: $c-text;
+    font-family: $f-l;
+
+    &:first-child {
+      width: 182px;
+      background: #FCFCFC;
+    }
+
+    &_name {
+      font-size: 13px;
+    }
+  }
+}
