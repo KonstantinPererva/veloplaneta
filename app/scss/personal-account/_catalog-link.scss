@@ -8,8 +8,66 @@
   padding: 4px 15px 4px 27px;
   text-decoration: none;
   word-break: break-all;
+
+  &_arrow {
+    &:after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      top: 7px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 5px 0 5px 4px;
+      border-color: transparent transparent transparent $c-text;
+      transition: .15s;
+    }
+
+    &.active {
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
+  }
   
-  &_active {
+  &.active {
     background: $c-active-bg-list-link;
+
+    &:hover {
+      @media (hover: hover) {
+        background: $c-active-bg-list-link;
+      }
+    }
+  }
+
+  &:hover {
+    @media (hover: hover) {
+      background: $c-hover-bg-list-link;
+    }
+  }
+
+
+  &_level-2 {
+    padding: 4px 15px 4px 40px;
+
+    &:after {
+      left: 27px;
+    }
+  }
+
+  &_level-3 {
+    padding: 4px 15px 4px 53px;
+
+    &:after {
+      left: 40px;
+    }
+  }
+
+  &_level-4 {
+    padding: 4px 15px 4px 66px;
+
+    &:after {
+      left: 53px;
+    }
   }
 }

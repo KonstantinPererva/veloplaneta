@@ -10,7 +10,8 @@ var Resizing = function(opt) {
         boxLeft: undefined,
         boxRight: undefined,
         boxTop: undefined,
-        boxBottom: undefined
+        boxBottom: undefined,
+        resizeListener: undefined
     }, opt);
 
     var resizeBox = {
@@ -125,24 +126,14 @@ var Resizing = function(opt) {
             }
         },
 
-        addBodyListenerMousemove : function () {
-            return document.body.addEventListener('mousemove', resizeBox.resize);
-        },
-
-        addBodyListenerMousedown : function () {
-            return document.body.addEventListener( 'mousedown', resizeBox.setLever );
-        },
-
-        addBodyListenerMouseup : function () {
-            return document.body.addEventListener( 'mouseup', resizeBox.reset );
-        },
-
-        addButtonListenerClick : function () {
-            return resizeBox.button().addEventListener( 'click', resizeBox.toggleHideBox );
+        listenerResizeBox: function () {
+            if (option.resizeListener) option.resizeListener();
         },
 
         resize: function(e) {
             if (!resizeBox.dragObject.elem) return; // элемент не зажат
+
+            resizeBox.listenerResizeBox();
 
             if (option.direction === 'horizontal') {
                 var moveX = e.pageX - resizeBox.dragObject.downX;
@@ -163,6 +154,22 @@ var Resizing = function(opt) {
                 resizeBox.boxTop().style.height = parseInt(getComputedStyle(resizeBox.boxTop()).height) + moveY + 'px';
                 resizeBox.boxBottom().style.height = parseInt(getComputedStyle(resizeBox.boxBottom()).height) - moveY + 'px';
             }
+        },
+
+        addBodyListenerMousemove : function () {
+            return document.body.addEventListener('mousemove', resizeBox.resize);
+        },
+
+        addBodyListenerMousedown : function () {
+            return document.body.addEventListener( 'mousedown', resizeBox.setLever );
+        },
+
+        addBodyListenerMouseup : function () {
+            return document.body.addEventListener( 'mouseup', resizeBox.reset );
+        },
+
+        addButtonListenerClick : function () {
+            return resizeBox.button().addEventListener( 'click', resizeBox.toggleHideBox );
         },
 
         removeBodyListenerMousemove: function () {
@@ -221,6 +228,8 @@ var Resizing = function(opt) {
         },
 
         touchMove : function (e) {
+
+            resizeBox.listenerResizeBox();
 
             var elem = e.target;
 

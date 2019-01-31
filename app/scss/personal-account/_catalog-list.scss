@@ -2,27 +2,4 @@
   list-style: none;
   padding: 0 0 10px;
   margin: 0;
-
-  &__item {
-
-    &.active {
-      background: $c-active-bg-list-link;
-
-      &:hover {
-        @media (hover: hover) {
-          background: $c-hover-bg-list-link;
-        }
-      }
-    }
-
-    &:hover {
-      @media (hover: hover) {
-        background: $c-hover-bg-list-link;
-      }
-    }
-
-    & .catalog-list__item {
-      padding: 0 0 0 10px;
-    }
-  }
 }

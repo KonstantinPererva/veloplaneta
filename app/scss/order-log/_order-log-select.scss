@@ -1,25 +1,77 @@
 .order-log-select {
-  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
   height: 22px;
-  width: 100px;
-  border: 1px solid $c-border;
+  min-width: 78px;
+  max-width: 100px;
+  width: 100%;
+  border: 1px solid $c-gray-title;
   border-radius: 2px;
   font-size: 12px;
   font-family: $f-l;
+  margin: 0 0 0 3px;
+  padding: 0 18px 0 6px;
+  color: $c-gray-title;
 
-  & ul {
-    display: none;
+  &:hover:not(.order-log-select_date) {
+    @media (hover: hover) {
+      cursor: pointer;
+    }
+  }
+  
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-color: $c-gray-title transparent transparent transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 6px;
+    margin: auto;
   }
 
-  & input::-webkit-calendar-picker-indicator {
-    opacity: 1;
+  &_date {
+    flex-shrink: 0;
+    width: 130px;
+    min-width: 0;
+    max-width: none;
+    padding: 0 0 0 6px;
+  }
+
+  &__text {
+    display: block;
+    min-width: 56px;
+    max-width: 74px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 12px;
+    font-family: $f-l;
+  }
+
+  &__date-first::-webkit-calendar-picker-indicator, &__date-last::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    color: $c-gray-title;
+    z-index: 1;
   }
 
   &__date-first, &__date-last {
+    width: 120px;
+    height: 20px;
     background: transparent;
     border: 0;
     font-size: 12px;
     font-family: $f-l;
-    height: 20px;
+    user-select: none;
+    color: $c-gray-title;
+
+    &:focus, &:active {
+      outline: none;
+    }
   }
 }

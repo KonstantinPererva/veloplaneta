@@ -39,19 +39,20 @@
   }
 
   &__left {
-    flex-shrink: 0;
-    width: 616px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     min-width: 616px;
-    max-width: calc(100% - 315px);
+    max-width: calc(100% - 335px);
     height: 100%;
     overflow: hidden;
-    background: #fff;
   }
 
   &__right {
-    flex-grow: 1;
-    width: calc(100% - 631px);
-    min-width: 300px;
+    flex-shrink: 0;
+    width: 670px;
+    min-width: 320px;
     max-width: calc(100% - 631px);
     height: 100%;
     overflow: hidden;

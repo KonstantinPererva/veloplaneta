@@ -8,8 +8,9 @@
 
   &:hover {
     @media (hover:hover) {
-      color: #fff;
-      background: $c-red;
+      color: $c-dark-red;
+      border-width: 2px;
+      padding: 0 15px;
     }
   }
 }

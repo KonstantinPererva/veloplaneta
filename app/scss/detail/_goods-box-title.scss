@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px 0 0;
 
   &__wrap {
     display: flex;
@@ -29,7 +30,7 @@
     color: $c-text;
   }
 
-  &__ico {
+  &__ico-wrap {
     display: block;
 
     & svg {

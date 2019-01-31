@@ -13,7 +13,7 @@
 
   &:hover {
     @media (hover:hover) {
-      color: $c-red;
+      background: $c-hover-bg-btn-gray;
     }
   }
 
