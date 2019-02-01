@@ -136,23 +136,23 @@ var Resizing = function(opt) {
             resizeBox.listenerResizeBox();
 
             if (option.direction === 'horizontal') {
-                var moveX = e.pageX - resizeBox.dragObject.downX;
+                var moveX = e.pageX - resizeBox.boxLeft().offsetLeft;
 
                 resizeBox.dragObject.downX += moveX;
 
-                resizeBox.boxLeft().style.width = resizeBox.getSizeBoxes(resizeBox.boxLeft()).width + moveX + 'px';
-                resizeBox.boxRight().style.width = resizeBox.getSizeBoxes(resizeBox.boxRight()).width - moveX + 'px';
+                resizeBox.boxLeft().style.width = e.pageX - resizeBox.boxLeft().offsetLeft + 'px';
+                resizeBox.boxRight().style.width = e.pageX - resizeBox.boxLeft().offsetLeft + 'px';
 
                 return;
             }
 
             if (option.direction === 'vertical') {
-                var moveY = e.pageY - resizeBox.dragObject.downY;
+                var moveY = e.pageY - resizeBox.boxTop().offsetTop;
 
                 resizeBox.dragObject.downY += moveY;
 
-                resizeBox.boxTop().style.height = resizeBox.getSizeBoxes(resizeBox.boxTop()).height + moveY + 'px';
-                resizeBox.boxBottom().style.height = resizeBox.getSizeBoxes(resizeBox.boxBottom()).height - moveY + 'px';
+                resizeBox.boxTop().style.height = moveY + 'px';
+                resizeBox.boxBottom().style.height = moveY + 'px';
             }
         },
 
