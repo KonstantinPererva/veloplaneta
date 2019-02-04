@@ -5,6 +5,10 @@
   background: #fff;
   padding: 3px;
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   &__close {
     @extend .button-all;
     position: absolute;

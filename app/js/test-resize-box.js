@@ -78,8 +78,6 @@ var Resizing = function(opt) {
 
             if (!(elem === resizeBox.lever())) return;
 
-            resizeBox.setSizeBoxes();
-
             resizeBox.dragObject = {};
             resizeBox.dragObject.elem = elem;
             resizeBox.dragObject.downX = e.pageX;
@@ -136,23 +134,23 @@ var Resizing = function(opt) {
             resizeBox.listenerResizeBox();
 
             if (option.direction === 'horizontal') {
-                var moveX = e.pageX - resizeBox.boxLeft().offsetLeft;
+                var moveX = e.pageX - resizeBox.dragObject.downX;
 
                 resizeBox.dragObject.downX += moveX;
 
-                resizeBox.boxLeft().style.width = e.pageX - resizeBox.boxLeft().offsetLeft + 'px';
-                resizeBox.boxRight().style.width = e.pageX - resizeBox.boxLeft().offsetLeft + 'px';
+                resizeBox.boxLeft().style.width = resizeBox.getSizeBoxes(resizeBox.boxLeft()).width + moveX + 'px';
+                resizeBox.boxRight().style.width = resizeBox.getSizeBoxes(resizeBox.boxRight()).width - moveX + 'px';
 
                 return;
             }
 
             if (option.direction === 'vertical') {
-                var moveY = e.pageY - resizeBox.boxTop().offsetTop;
+                var moveY = e.pageY - resizeBox.dragObject.downY;
 
                 resizeBox.dragObject.downY += moveY;
 
-                resizeBox.boxTop().style.height = moveY + 'px';
-                resizeBox.boxBottom().style.height = moveY + 'px';
+                resizeBox.boxTop().style.height = resizeBox.getSizeBoxes(resizeBox.boxTop()).height + moveY + 'px';
+                resizeBox.boxBottom().style.height = resizeBox.getSizeBoxes(resizeBox.boxBottom()).height - moveY + 'px';
             }
         },
 
@@ -241,8 +239,8 @@ var Resizing = function(opt) {
 
                 resizeBox.dragObject.downX += moveX;
 
-                resizeBox.boxLeft().style.width = parseInt(getComputedStyle(resizeBox.boxLeft()).width, 10) + moveX + 'px';
-                resizeBox.boxRight().style.width = parseInt(getComputedStyle(resizeBox.boxRight()).width, 10) - moveX + 'px';
+                resizeBox.boxLeft().style.width = resizeBox.getSizeBoxes(resizeBox.boxLeft()).width + moveX + 'px';
+                resizeBox.boxRight().style.width = resizeBox.getSizeBoxes(resizeBox.boxRight()).width - moveX + 'px';
 
                 return;
             }
@@ -255,8 +253,8 @@ var Resizing = function(opt) {
 
                 resizeBox.dragObject.downY += moveY;
 
-                resizeBox.boxTop().style.height = parseInt(getComputedStyle(resizeBox.boxTop()).height, 10) + moveY + 'px';
-                resizeBox.boxBottom().style.height = parseInt(getComputedStyle(resizeBox.boxBottom()).height, 10) - moveY + 'px';
+                resizeBox.boxTop().style.height = resizeBox.getSizeBoxes(resizeBox.boxTop()).height + moveY + 'px';
+                resizeBox.boxBottom().style.height = resizeBox.getSizeBoxes(resizeBox.boxBottom()).height - moveY + 'px';
             }
         },
 
