@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function(){
-    return gulp.src(['app/scss/style-manager.scss','app/scss/style.scss','app/scss/style-personal-account.scss','app/scss/style-detail.scss','app/scss/style-order-log.scss'])
+    return gulp.src(['app/scss/style-order.scss','app/scss/style-manager.scss','app/scss/style.scss','app/scss/style-personal-account.scss','app/scss/style-detail.scss','app/scss/style-order-log.scss'])
         .pipe(sass())
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('app/css'))
