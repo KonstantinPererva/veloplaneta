@@ -616,8 +616,6 @@ nav {
           justify-content: space-between; }
   .catalog-menu-wrapper__button {
     padding: 0 11px; }
-    .catalog-menu-wrapper__button button {
-      width: 100%; }
 
 .catalog-menu-list, .catalog-menu-list-drop {
   list-style: none;
