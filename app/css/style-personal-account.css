@@ -16,10 +16,20 @@ body {
   background-color: #F5F6F8; }
 
 main {
-  max-width: 1066px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 40px 0 0; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 40px 15px 0; }
+  @media (max-width: 1023px) {
+    main {
+      padding: 40px 10px 0; } }
 
 .some-svg {
   width: 70px;
@@ -2589,7 +2599,7 @@ nav {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 15px 0 0; }
+  padding: 15px 0; }
   .form__row {
     display: -webkit-box;
     display: -webkit-flex;
