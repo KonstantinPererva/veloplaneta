@@ -1,0 +1,41 @@
+.user-document-card {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  height: 20px;
+  font-size: 11px;
+  font-family: $f-l;
+  color: $c-text;
+  line-height: 16px;
+  transition: .15s;
+
+  &:hover {
+    @media (hover: hover) {
+      cursor: pointer;
+      color: $c-red;
+
+      & svg path {
+        fill: $c-red;
+      }
+    }
+  }
+
+  &__ico-wrap {
+    display: block;
+    margin: 0 6px 0 0;
+    & svg {
+      display: block;
+
+      & path {
+        transition: .15s;
+      }
+    }
+  }
+
+  &__name {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

@@ -3,3 +3,12 @@
   padding: 0 0 10px;
   margin: 0;
 }
+
+.catalog-menu-list-drop {
+  @extend .catalog-menu-list;
+  padding: 0;
+
+  &.active {
+    display: block !important;
+  }
+}

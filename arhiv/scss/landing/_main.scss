@@ -1,0 +1,13 @@
+.main {
+  background: url(../../../app/images/bg-section.png) no-repeat center bottom;
+  background-size: contain;
+
+  @media (max-width: 1151px) {
+    background: url(../../../app/images/bg-section-tablet.png) no-repeat center bottom;
+    background-size: contain;
+  }
+
+  @media (max-width: 767px) {
+    background: none;
+  }
+}

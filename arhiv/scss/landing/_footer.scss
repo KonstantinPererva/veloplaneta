@@ -1,0 +1,47 @@
+.footer {
+  background: $c-bg-footer;
+  padding: 8px 0;
+
+  &__hold {
+    max-width: 1024px;
+    width: 100%;
+    padding: 0 22px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 23px 0 15px;
+
+    @media (max-width: 767px) {
+      height: 170px;
+    }
+  }
+
+  &__address {
+    padding: 8px 0 0 23px;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  &__form {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
+
+.footer-copy {
+  &__text {
+    font-size: 12px;
+    font-family: $f-l;
+    line-height: 12px;
+    color: $c-text-gray;
+  }
+}

@@ -4,4 +4,95 @@
   left: 0;
   width: 100%;
   z-index: 10;
+  height: 40px;
+  background-color: #fff;
+  border-bottom: 1px solid #E2E2E2;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 15px;
+  }
+
+  &__logo {
+    font-size: 0;
+    line-height: 0;
+  }
+}
+
+nav {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 0 0 28px;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    margin: 0 0 0 -1px;
+    list-style: none;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 1px 11px;
+
+    font-size: 13px;
+    color: $c-text;
+
+
+    border-radius: 3px;
+    text-decoration: none;
+
+    &.active {
+      background-color: #FFEDEF;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 0 19px;
+
+    &.mail {
+      position: relative;
+
+      .count {
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 14px;
+        height: 14px;
+
+        color: #fff;
+        font-size: 10px;
+
+        border-radius: 50%;
+        background: $c-red;
+        border: 1px solid $c-red;
+      }
+
+      svg {
+        fill: $c-red;
+      }
+    }
+
+    span {
+      font-size: 13px;
+      color: $c-text;
+    }
+  }
 }

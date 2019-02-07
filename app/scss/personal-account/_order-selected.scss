@@ -1,0 +1,26 @@
+.order-selected {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.order-selected-table {
+  flex-grow: 1;
+  background: #fff;
+  margin: 0 0 15px;
+
+  &__hold {}
+}
+
+.order-selected-title {
+  flex-shrink: 0;
+  width: 100%;
+  height: 33px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  font-family: $f-l;
+  font-size: 16px;
+  color: $c-text;
+  line-height: 21px;
+}

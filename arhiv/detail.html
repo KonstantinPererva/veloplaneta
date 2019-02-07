@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Велопланета</title>
-    <link rel="stylesheet" href="css/style-personal-account.css">
+    <link rel="stylesheet" href="../app/css/style-personal-account.css">
+    <link rel="stylesheet" href="../app/css/style-detail.css">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <div class="header-personal-account__row">
             <div class="header-personal-account__logo">
                 <a href="#">
-                    <img src="img/logo.svg" alt="logo" />
+                    <img src="../app/img/logo.svg" alt="logo" />
                 </a>
             </div>
 
@@ -42,11 +43,11 @@
                 <div class="info__item mail">
                     <div class="count">2</div>
 
-                    <img src="img/mail.svg" alt="mail" />
+                    <img src="../app/img/mail.svg" alt="mail" />
                 </div>
 
                 <div class="info__item">
-                    <img src="img/user.svg" alt="user" />
+                    <img src="../app/img/user.svg" alt="user" />
                 </div>
             </div>
         </div>
@@ -93,279 +94,279 @@
                 </div>
              </div>
 
-            <div class="page-grid" data-grid="catalog-container">
-                <div class="page-grid__left" data-grid="catalog-cell-left">
-                    <div class="page-grid__left-top" data-grid="catalog-row-top-cell-left">
-                        <div class="catalog-menu-wrapper">
+            <div class="page-grid" data-grid="container">
+                <div class="page-grid__left" data-grid="cell-left">
+                    <div class="page-grid__left-top" data-grid="row-top-cell-left">
+                        <div class="catalog-menu-list-wrapper">
                             <ul class="catalog-menu-list">
                                 <li class="catalog-menu-list__item" data-menu="container">
-                                    <a href="#" class="catalog-link catalog-link_arrow" data-menu="button">Велосипеды</a>
+                                    <a href="#" class="catalog-link-drop" data-menu="button">Велосипеды</a>
 
                                     <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none" data-menu="dropBox">
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2">Горные</a>
+                                            <a href="#" class="catalog-link">Горные</a>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2">Городские</a>
+                                            <a href="#" class="catalog-link">Городские</a>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2">Шоссейные</a>
+                                            <a href="#" class="catalog-link">Шоссейные</a>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2">Детские</a>
+                                            <a href="#" class="catalog-link">Детские</a>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2">Беговелы</a>
+                                            <a href="#" class="catalog-link">Беговелы</a>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2">Самокаты</a>
+                                            <a href="#" class="catalog-link">Самокаты</a>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2">BMX</a>
+                                            <a href="#" class="catalog-link">BMX</a>
                                         </li>
                                     </ul>
                                 </li>
 
                                 <li class="catalog-menu-list__item" data-menu="container">
-                                    <a href="#" class="catalog-link catalog-link_arrow" data-menu="button">Компоненты</a>
+                                    <a href="#" class="catalog-link-drop" data-menu="button">Компоненты</a>
 
                                     <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2 catalog-link_arrow" data-menu="button">Рамы</a>
+                                            <a href="#" class="catalog-link-drop" data-menu="button">Рамы</a>
 
                                             <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Запчасти для рам</a>
+                                                    <a href="#" class="catalog-link">Запчасти для рам</a>
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2 catalog-link_arrow" data-menu="button">Вилки, амортизаторы</a>
+                                            <a href="#" class="catalog-link-drop" data-menu="button">Вилки, амортизаторы</a>
 
                                             <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Вилки</a>
+                                                    <a href="#" class="catalog-link">Вилки</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Запчасти для вилок</a>
+                                                    <a href="#" class="catalog-link">Запчасти для вилок</a>
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2 catalog-link_arrow" data-menu="button">Привод</a>
+                                            <a href="#" class="catalog-link-drop" data-menu="button">Привод</a>
 
                                             <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Звезды к шатунам</a>
+                                                    <a href="#" class="catalog-link">Звезды к шатунам</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Звезды к шатунам</a>
+                                                    <a href="#" class="catalog-link">Звезды к шатунам</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Каретки</a>
+                                                    <a href="#" class="catalog-link">Каретки</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Педали</a>
+                                                    <a href="#" class="catalog-link">Педали</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Компоненты к педалям</a>
+                                                    <a href="#" class="catalog-link">Компоненты к педалям</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Задние звезды</a>
+                                                    <a href="#" class="catalog-link">Задние звезды</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Цепи</a>
+                                                    <a href="#" class="catalog-link">Цепи</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Болты шатунов, бонки</a>
+                                                    <a href="#" class="catalog-link">Болты шатунов, бонки</a>
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2 catalog-link_arrow" data-menu="button">Трансмиссия</a>
+                                            <a href="#" class="catalog-link-drop" data-menu="button">Трансмиссия</a>
 
                                             <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Переключатели передние</a>
+                                                    <a href="#" class="catalog-link">Переключатели передние</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Переключатели задние</a>
+                                                    <a href="#" class="catalog-link">Переключатели задние</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Ручки переключения</a>
+                                                    <a href="#" class="catalog-link">Ручки переключения</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Успокоители, натяжители цепи</a>
+                                                    <a href="#" class="catalog-link">Успокоители, натяжители цепи</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Ролики</a>
+                                                    <a href="#" class="catalog-link">Ролики</a>
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2 catalog-link_arrow" data-menu="button">Колесные части</a>
+                                            <a href="#" class="catalog-link-drop" data-menu="button">Колесные части</a>
 
                                             <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Колеса</a>
+                                                    <a href="#" class="catalog-link">Колеса</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Покрышки</a>
+                                                    <a href="#" class="catalog-link">Покрышки</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Втулки передние</a>
+                                                    <a href="#" class="catalog-link">Втулки передние</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Спицы</a>
+                                                    <a href="#" class="catalog-link">Спицы</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Обода</a>
+                                                    <a href="#" class="catalog-link">Обода</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Втулки задние</a>
+                                                    <a href="#" class="catalog-link">Втулки задние</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Ниппеля</a>
+                                                    <a href="#" class="catalog-link">Ниппеля</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Ободные ленты</a>
+                                                    <a href="#" class="catalog-link">Ободные ленты</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Камеры</a>
+                                                    <a href="#" class="catalog-link">Камеры</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Колпачки для камер</a>
+                                                    <a href="#" class="catalog-link">Колпачки для камер</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Эксцентрики, оси</a>
+                                                    <a href="#" class="catalog-link">Эксцентрики, оси</a>
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2 catalog-link_arrow" data-menu="button">Тормозные системы</a>
+                                            <a href="#" class="catalog-link-drop" data-menu="button">Тормозные системы</a>
 
                                             <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Тормозные колодки</a>
+                                                    <a href="#" class="catalog-link">Тормозные колодки</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Дисковые тормоза</a>
+                                                    <a href="#" class="catalog-link">Дисковые тормоза</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Ободные тормоза</a>
+                                                    <a href="#" class="catalog-link">Ободные тормоза</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Тормозные ручки</a>
+                                                    <a href="#" class="catalog-link">Тормозные ручки</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Компоненты к тормозам</a>
+                                                    <a href="#" class="catalog-link">Компоненты к тормозам</a>
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2 catalog-link_arrow" data-menu="button">Седла, подседелы</a>
+                                            <a href="#" class="catalog-link-drop" data-menu="button">Седла, подседелы</a>
 
                                             <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Седла</a>
+                                                    <a href="#" class="catalog-link">Седла</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Подседельные трубы</a>
+                                                    <a href="#" class="catalog-link">Подседельные трубы</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Хомуты</a>
+                                                    <a href="#" class="catalog-link">Хомуты</a>
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2 catalog-link_arrow" data-menu="button">Рулевое управление</a>
+                                            <a href="#" class="catalog-link-drop" data-menu="button">Рулевое управление</a>
 
                                             <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Рули</a>
+                                                    <a href="#" class="catalog-link">Рули</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Рулевые колонки</a>
+                                                    <a href="#" class="catalog-link">Рулевые колонки</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Выносы руля</a>
+                                                    <a href="#" class="catalog-link">Выносы руля</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Рога</a>
+                                                    <a href="#" class="catalog-link">Рога</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Баренды, замки</a>
+                                                    <a href="#" class="catalog-link">Баренды, замки</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Грипсы</a>
+                                                    <a href="#" class="catalog-link">Грипсы</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Обмотка руля</a>
+                                                    <a href="#" class="catalog-link">Обмотка руля</a>
                                                 </li>
                                             </ul>
                                         </li>
 
                                         <li class="catalog-menu-list__item">
-                                            <a href="#" class="catalog-link catalog-link_level-2 catalog-link_arrow" data-menu="button">Тросики, рубашки и колпачки</a>
+                                            <a href="#" class="catalog-link-drop" data-menu="button">Тросики, рубашки и колпачки</a>
 
                                             <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Тросики</a>
+                                                    <a href="#" class="catalog-link">Тросики</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Рубашки</a>
+                                                    <a href="#" class="catalog-link">Рубашки</a>
                                                 </li>
 
                                                 <li class="catalog-menu-list__item">
-                                                    <a href="#" class="catalog-link catalog-link_level-3">Колпачки</a>
+                                                    <a href="#" class="catalog-link">Колпачки</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -373,7 +374,7 @@
                                 </li>
 
                                 <li class="catalog-menu-list__item" data-menu="container">
-                                    <a href="#" class="catalog-link catalog-link_arrow" data-menu="button">Инструменты</a>
+                                    <a href="#" class="catalog-link-drop" data-menu="button">Инструменты</a>
 
                                     <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                         <li class="catalog-menu-list__item">
@@ -395,7 +396,7 @@
                                 </li>
 
                                 <li class="catalog-menu-list__item" data-menu="container">
-                                    <a href="#" class="catalog-link catalog-link_arrow" data-menu="button">Одежда</a>
+                                    <a href="#" class="catalog-link-drop" data-menu="button">Одежда</a>
 
                                     <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                         <li class="catalog-menu-list__item">
@@ -449,7 +450,7 @@
                                 </li>
 
                                 <li class="catalog-menu-list__item" data-menu="container">
-                                    <a href="#" class="catalog-link catalog-link_arrow" data-menu="button">Аксессуары</a>
+                                    <a href="#" class="catalog-link-drop" data-menu="button">Аксессуары</a>
 
                                     <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                         <li class="catalog-menu-list__item">
@@ -487,7 +488,7 @@
                                 </li>
 
                                 <li class="catalog-menu-list__item" data-menu="container">
-                                    <a href="#" class="catalog-link catalog-link_arrow" data-menu="button">Зимние товары</a>
+                                    <a href="#" class="catalog-link-drop" data-menu="button">Зимние товары</a>
 
                                     <ul class="catalog-menu-list-drop" data-menu="dropBox" style="display: none">
                                         <li class="catalog-menu-list__item">
@@ -513,7 +514,7 @@
                                 </li>
                             </ul>
 
-                            <div class="catalog-menu-wrapper__button">
+                            <div class="catalog-menu-list-wrapper__button">
                                 <button class="button-download-price" type="button">
                                     <span class="button-download-price__text">Скачать прайс</span>
                                 </button>
@@ -521,11 +522,11 @@
                         </div>
                     </div>
 
-                    <div class="page-grid__lever page-grid__lever_horizontal" data-grid="catalog-lever-vertical-cell-left">
+                    <div class="page-grid__lever page-grid__lever_horizontal" data-grid="lever-vertical-cell-left">
                         <button class="page-grid__button-horizontal" data-grid="button-toggle"></button>
                     </div>
 
-                    <div class="page-grid__left-bottom" data-grid="catalog-row-bottom-cell-left">
+                    <div class="page-grid__left-bottom" data-grid="row-bottom-cell-left">
                         <div class="catalog-filter">
                             <div class="catalog-filter__header">
                                 <div class="catalog-filter-title">
@@ -555,51 +556,39 @@
                                                 <li class="filter-list-drop__item">
                                                     <a href="#" class="filter-card-link active">
                                                         <span class="filter-card-link__text">55</span>
-
-                                                        <span class="filter-card-link__reset">
-                                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447Z" fill="#ffffff"/>
-                                                            </svg>
-                                                        </span>
                                                     </a>
                                                 </li>
 
                                                 <li class="filter-list-drop__item">
                                                     <a href="#" class="filter-card-link active">
                                                         <span class="filter-card-link__text">67</span>
-
-                                                        <span class="filter-card-link__reset">
-                                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447Z" fill="#ffffff"/>
-                                                            </svg>
-                                                        </span>
                                                     </a>
                                                 </li>
                                             </ul>
 
                                             <ul class="filter-selected-list">
                                                 <li class="filter-selected-list__item">
-                                                    <a href="#" class="filter-card-link active">
-                                                        <span class="filter-card-link__text">55</span>
+                                                    <div class="selected-item">
+                                                        <div class="selected-item__title">55</div>
 
-                                                        <span class="filter-card-link__reset">
-                                                            <svg width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <button type="button" class="selected-item__delete">
+                                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447Z" fill="#ffffff"/>
                                                             </svg>
-                                                        </span>
-                                                    </a>
+                                                        </button>
+                                                    </div>
                                                 </li>
 
                                                 <li class="filter-selected-list__item">
-                                                    <a href="#" class="filter-card-link active">
-                                                        <span class="filter-card-link__text">67</span>
+                                                    <div class="selected-item">
+                                                        <div class="selected-item__title">67</div>
 
-                                                        <span class="filter-card-link__reset">
-                                                            <svg width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <button type="button" class="selected-item__delete">
+                                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447Z" fill="#ffffff"/>
                                                             </svg>
-                                                        </span>
-                                                    </a>
+                                                        </button>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -633,27 +622,27 @@
 
                                             <ul class="filter-selected-list">
                                                 <li class="filter-selected-list__item">
-                                                    <a href="#" class="filter-card-link active">
-                                                        <span class="filter-card-link__text">55</span>
+                                                    <div class="selected-item">
+                                                        <div class="selected-item__title">55</div>
 
-                                                        <span class="filter-card-link__reset">
-                                                            <svg width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <button type="button" class="selected-item__delete">
+                                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447Z" fill="#ffffff"/>
                                                             </svg>
-                                                        </span>
-                                                    </a>
+                                                        </button>
+                                                    </div>
                                                 </li>
 
                                                 <li class="filter-selected-list__item">
-                                                    <a href="#" class="filter-card-link active">
-                                                        <span class="filter-card-link__text">67</span>
+                                                    <div class="selected-item">
+                                                        <div class="selected-item__title">67</div>
 
-                                                        <span class="filter-card-link__reset">
-                                                            <svg width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <button type="button" class="selected-item__delete">
+                                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447Z" fill="#ffffff"/>
                                                             </svg>
-                                                        </span>
-                                                    </a>
+                                                        </button>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -687,27 +676,27 @@
 
                                             <ul class="filter-selected-list">
                                                 <li class="filter-selected-list__item">
-                                                    <a href="#" class="filter-card-link active">
-                                                        <span class="filter-card-link__text">55</span>
+                                                    <div class="selected-item">
+                                                        <div class="selected-item__title">55</div>
 
-                                                        <span class="filter-card-link__reset">
-                                                            <svg width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <button type="button" class="selected-item__delete">
+                                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447Z" fill="#ffffff"/>
                                                             </svg>
-                                                        </span>
-                                                    </a>
+                                                        </button>
+                                                    </div>
                                                 </li>
 
                                                 <li class="filter-selected-list__item">
-                                                    <a href="#" class="filter-card-link active">
-                                                        <span class="filter-card-link__text">67</span>
+                                                    <div class="selected-item">
+                                                        <div class="selected-item__title">67</div>
 
-                                                        <span class="filter-card-link__reset">
-                                                            <svg width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <button type="button" class="selected-item__delete">
+                                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447Z" fill="#ffffff"/>
                                                             </svg>
-                                                        </span>
-                                                    </a>
+                                                        </button>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -721,14 +710,8 @@
 
                                             <ul class="filter-list-drop" data-filter="dropBox" style="display: none">
                                                 <li class="filter-list-drop__item">
-                                                    <a href="#" class="filter-card-link active">
+                                                    <a href="#" class="filter-card-link">
                                                         <span class="filter-card-link__text">Item</span>
-
-                                                        <span class="filter-card-link__reset">
-                                                            <svg width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447Z" fill="#ffffff"/>
-                                                            </svg>
-                                                        </span>
                                                     </a>
                                                 </li>
 
@@ -745,14 +728,8 @@
                                                 </li>
 
                                                 <li class="filter-list-drop__item">
-                                                    <a href="#" class="filter-card-link active">
+                                                    <a href="#" class="filter-card-link">
                                                         <span class="filter-card-link__text">ItemItemItem</span>
-
-                                                        <span class="filter-card-link__reset">
-                                                            <svg width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447Z" fill="#ffffff"/>
-                                                            </svg>
-                                                        </span>
                                                     </a>
                                                 </li>
 
@@ -765,27 +742,27 @@
 
                                             <ul class="filter-selected-list">
                                                 <li class="filter-selected-list__item">
-                                                    <a href="#" class="filter-card-link active">
-                                                        <span class="filter-card-link__text">Item</span>
+                                                    <div class="selected-item">
+                                                        <div class="selected-item__title">Item</div>
 
-                                                        <span class="filter-card-link__reset">
-                                                            <svg width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <button type="button" class="selected-item__delete">
+                                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447Z" fill="#ffffff"/>
                                                             </svg>
-                                                        </span>
-                                                    </a>
+                                                        </button>
+                                                    </div>
                                                 </li>
 
                                                 <li class="filter-selected-list__item">
-                                                    <a href="#" class="filter-card-link active">
-                                                        <span class="filter-card-link__text">ItemItemItem</span>
+                                                    <div class="selected-item">
+                                                        <div class="selected-item__title">ItemItemItem</div>
 
-                                                        <span class="filter-card-link__reset">
-                                                            <svg width="10" height="10" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <button type="button" class="selected-item__delete">
+                                                            <svg width="7" height="7" viewBox="0 0 7 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M0.646447 1.35355L5.64645 6.35355L6.35355 5.64645L1.35355 0.646447L0.646447 1.35355ZM5.64645 0.646447L0.646447 5.64645L1.35355 6.35355L6.35355 1.35355L5.64645 0.646447Z" fill="#ffffff"/>
                                                             </svg>
-                                                        </span>
-                                                    </a>
+                                                        </button>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -796,20 +773,20 @@
                     </div>
                 </div>
 
-                <div class="page-grid__lever page-grid__lever_vertical" data-grid="catalog-lever-horizontal">
+                <div class="page-grid__lever page-grid__lever_vertical" data-grid="lever-horizontal">
                     <button class="page-grid__button-vertical" data-grid="button-toggle"></button>
                 </div>
 
-                <div class="page-grid__right" data-grid="catalog-cell-right">
-                    <div class="page-grid__right-top" data-grid="catalog-row-top-cell-right">
+                <div class="page-grid__right" data-grid="cell-right">
+                    <div class="page-grid__right-top" data-grid="row-top-cell-right">
                         <div class="catalog-table">******Table*******</div>
                     </div>
 
-                    <div class="page-grid__lever page-grid__lever_horizontal" data-grid="catalog-lever-vertical-cell-right">
+                    <div class="page-grid__lever page-grid__lever_horizontal" data-grid="lever-vertical-cell-right">
                         <button class="page-grid__button-horizontal" data-grid="button-toggle"></button>
                     </div>
 
-                    <div class="page-grid__right-bottom" data-grid="catalog-row-bottom-cell-right">
+                    <div class="page-grid__right-bottom" data-grid="row-bottom-cell-right">
                         <div class="order">
                             <div class="order-panel">
                                 <div class="order-panel__button-left">
@@ -861,6 +838,7 @@
                                             <path d="M30.5359 11.6279C31.5969 11.6279 32.6556 11.6279 33.7166 11.6279C33.7166 12.1698 33.7166 12.714 33.7166 13.2558C32.6556 13.2558 31.5969 13.2558 30.5359 13.2558C30.5359 12.714 30.5359 12.1698 30.5359 11.6279Z" fill="#207245"/>
                                             <path d="M30.5359 14.1861C31.5969 14.1861 32.6556 14.1861 33.7166 14.1861C33.7166 14.7279 33.7166 15.2721 33.7166 15.814C32.6556 15.814 31.5969 15.814 30.5359 15.814C30.5359 15.2721 30.5359 14.7279 30.5359 14.1861Z" fill="#207245"/>
                                         </svg>
+
                                     </button>
 
                                     <button class="import-catalog">
@@ -875,6 +853,7 @@
                                             <path d="M32.5359 11.6279C33.5969 11.6279 34.6556 11.6279 35.7166 11.6279C35.7166 12.1698 35.7166 12.714 35.7166 13.2558C34.6556 13.2558 33.5969 13.2558 32.5359 13.2558C32.5359 12.714 32.5359 12.1698 32.5359 11.6279Z" fill="white"/>
                                             <path d="M32.5359 14.1861C33.5969 14.1861 34.6556 14.1861 35.7166 14.1861C35.7166 14.7279 35.7166 15.2721 35.7166 15.814C34.6556 15.814 33.5969 15.814 32.5359 15.814C32.5359 15.2721 32.5359 14.7279 32.5359 14.1861Z" fill="white"/>
                                         </svg>
+
                                     </button>
 
                                     <button class="make-order">
@@ -884,64 +863,6 @@
                             </div>
 
                             <div class="order__tabs">
-                                <div class="description-goods">
-                                    <div class="description-goods__panel">
-                                        <button type="button" class="button-description-goods active">
-                                            <span class="button-description-goods__text">Основное</span>
-                                        </button>
-
-                                        <button type="button" class="button-description-goods">
-                                            <span class="button-description-goods__text">Технические характеристики</span>
-                                        </button>
-                                    </div>
-
-                                    <div class="description-goods__tabs">
-                                        <table class="table-description-goods">
-                                            <tr class="table-description-goods__row">
-                                                <td class="table-description-goods__cell">Полное название</td>
-
-                                                <td class="table-description-goods__cell table-description-goods__cell_name">Велосипед 27.5” Pride stella 7.2 2018 Lorem ipsum dolor set ammet</td>
-                                            </tr>
-
-                                            <tr class="table-description-goods__row">
-                                                <td class="table-description-goods__cell">ОЕМ</td>
-
-                                                <td class="table-description-goods__cell"></td>
-                                            </tr>
-
-                                            <tr class="table-description-goods__row">
-                                                <td class="table-description-goods__cell">Код</td>
-
-                                                <td class="table-description-goods__cell">031289</td>
-                                            </tr>
-
-                                            <tr class="table-description-goods__row">
-                                                <td class="table-description-goods__cell">Каталожный номер</td>
-
-                                                <td class="table-description-goods__cell">031289</td>
-                                            </tr>
-
-                                            <tr class="table-description-goods__row">
-                                                <td class="table-description-goods__cell">Применяемость</td>
-
-                                                <td class="table-description-goods__cell"></td>
-                                            </tr>
-
-                                            <tr class="table-description-goods__row">
-                                                <td class="table-description-goods__cell">Гарантия и комплектация</td>
-
-                                                <td class="table-description-goods__cell"></td>
-                                            </tr>
-                                        </table>
-                                    </div>
-
-                                    <div class="description-goods__tabs" style="display: none">
-                                        ***** Table Технические характеристики *****
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="order__tabs" style="display: none">
                                 <ul class="order-list">
                                     <li class="order-list__item">
                                         <div class="order-card">
@@ -957,46 +878,14 @@
         </div>
     </div>
 
-    <div class="manager">
-        <div class="manager__container">
-            <div class="manager__button">
-                <button class="button-close-manager">
-                    <span class="button-close-manager__text">Ваш менеджер</span>
-
-                    <span class="button-close-manager__ico"></span>
-                </button>
-            </div>
-
-            <div class="manager-detail">
-                <div class="manager-detail__wrap-img">
-                    <img src="images/manager.jpg" alt="manager" class="manager-detail__img">
-                </div>
-
-                <span class="manager-detail__title">Тищенко Максим</span>
-
-                <div class="manager-detail__block">
-                    <span class="manager-detail__property">Телефон</span>
-                    <span class="manager-detail__volume">063 123 45 67</span>
-                </div>
-
-                <div class="manager-detail__block">
-                    <span class="manager-detail__property">E-mail</span>
-                    <span class="manager-detail__volume">email@email.com</span>
-                </div>
-            </div>
-        </div>
-
-        <span class="manager__substrate"></span>
-    </div>
-
-    <div class="detail" style="display: none">
+    <div class="detail">
         <div class="detail__images">
             <div class="detail-popup">
                 <div class="swiper-container goods-gallery">
                     <ul class="swiper-wrapper goods-gallery-list">
                         <li class="swiper-slide goods-gallery-list__item">
                             <div class="goods-gallery-card">
-                                <img src="images/goods.jpg" alt="goods" class="goods-gallery-card__img" />
+                                <img src="../app/images/goods.jpg" alt="goods" class="goods-gallery-card__img" />
                             </div>
                         </li>
                     </ul>
@@ -1032,7 +921,7 @@
                 <div class="detail-goods__hold">
                     <div class="goods-picture">
                         <div class="goods-picture__img-wrap">
-                            <img src="images/goods.jpg" alt="goods" class="goods-picture__img" />
+                            <img src="../app/images/goods.jpg" alt="goods" class="goods-picture__img" />
 
                             <span class="goods-picture__substrate">
                                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1045,25 +934,25 @@
                             <ul class="img-small-list">
                                 <li class="img-small-list__item">
                                     <div class="img-small-card">
-                                        <img src="images/goods.jpg" alt="goods" class="img-small-card__img" />
+                                        <img src="../app/images/goods.jpg" alt="goods" class="img-small-card__img" />
                                     </div>
                                 </li>
 
                                 <li class="img-small-list__item">
                                     <div class="img-small-card">
-                                        <img src="images/goods.jpg" alt="goods" class="img-small-card__img" />
+                                        <img src="../app/images/goods.jpg" alt="goods" class="img-small-card__img" />
                                     </div>
                                 </li>
 
                                 <li class="img-small-list__item">
                                     <div class="img-small-card">
-                                        <img src="images/goods.jpg" alt="goods" class="img-small-card__img" />
+                                        <img src="../app/images/goods.jpg" alt="goods" class="img-small-card__img" />
                                     </div>
                                 </li>
 
                                 <li class="img-small-list__item">
                                     <div class="img-small-card">
-                                        <img src="images/goods.jpg" alt="goods" class="img-small-card__img" />
+                                        <img src="../app/images/goods.jpg" alt="goods" class="img-small-card__img" />
 
                                         <span class="img-small-card__substrate">
                                             <span class="img-small-card__more-num">+5</span>
@@ -1322,45 +1211,8 @@
     </div>
 </div>
 
-<script src="js/personal-account.js"></script>
-<script src="js/test-resize-box.js"></script>
-<script src="js/accordion.js"></script>
-
-<script>
-    (function () {
-        var catalogHorizontalResize = new Resizing({
-            direction: 'horizontal', //'horizontal' or 'vertical'
-            node: '[data-grid="catalog-container"]',
-            lever: '[data-grid="catalog-lever-horizontal"]',
-            button: '[data-grid="button-toggle"]',
-            hide: 'left',
-            boxLeft: '[data-grid="catalog-cell-left"]',
-            boxRight: '[data-grid="catalog-cell-right"]'
-        });
-        catalogHorizontalResize.init();
-
-        var catalogVerticalLeftBoxResize = new Resizing({
-            direction: 'vertical', //'horizontal' or 'vertical'
-            node: '[data-grid="catalog-cell-left"]',
-            lever: '[data-grid="catalog-lever-vertical-cell-left"]',
-            button: '[data-grid="button-toggle"]',
-            hide: 'bottom',
-            boxTop: '[data-grid="catalog-row-top-cell-left"]',
-            boxBottom: '[data-grid="catalog-row-bottom-cell-left"]'
-        });
-        catalogVerticalLeftBoxResize.init();
-
-        var catalogVerticalRightBoxResize = new Resizing({
-            direction: 'vertical', //'horizontal' or 'vertical'
-            node: '[data-grid="catalog-cell-right"]',
-            lever: '[data-grid="catalog-lever-vertical-cell-right"]',
-            button: '[data-grid="button-toggle"]',
-            hide: 'bottom',
-            boxTop: '[data-grid="catalog-row-top-cell-right"]',
-            boxBottom: '[data-grid="catalog-row-bottom-cell-right"]'
-        });
-        catalogVerticalRightBoxResize.init();
-    })();
-</script>
+<script src="../app/js/personal-account.js"></script>
+<script src="../app/js/resize-box.js"></script>
+<script src="../app/js/accordion.js"></script>
 </body>
 </html>

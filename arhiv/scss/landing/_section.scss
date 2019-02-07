@@ -1,0 +1,49 @@
+.section {
+  padding: 30px 0;
+
+  @media (max-width: 767px) {
+    padding: 0;
+  }
+
+  &_brand {
+    margin: 0 0 30px;
+  }
+
+  &_about {
+    @media (max-width: 767px) {
+      background: url(../../../app/images/bg-section-mob.png) no-repeat center top;
+      background-size: contain;
+    }
+  }
+
+  &__hold {
+    max-width: 1024px;
+    width: 100%;
+    padding: 0 22px;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+      padding: 0 15px;
+    }
+  }
+}
+
+.section-title {
+  padding: 20px 0;
+  font-size: 30px;
+  line-height: 34px;
+  font-family: $f-l;
+  color: $c-text;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 30px;
+  letter-spacing: 12px;
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0;
+    letter-spacing: 4px;
+  }
+}
