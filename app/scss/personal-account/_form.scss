@@ -6,27 +6,69 @@
   flex-direction: column;
   padding: 15px 0;
 
+  @media (max-width: 1023px) {
+    display: block;
+    max-width: 600px;
+  }
+
   &__row {
     display: flex;
 
+    @media (max-width: 1023px) {
+      display: block;
+    }
+
+    &:nth-child(1) {
+      flex-shrink: 0;
+    }
+
     &:nth-child(2) {
       margin: 0 -7px;
+      flex-grow: 1;
+
+      @media (max-width: 1023px) {
+        margin: 0;
+      }
     }
   }
 
   &__col {
     margin: 0 7px;
-
-    width: 33%;
     background-color: #fff;
-    border: 1px solid #E2E2E2;
+    border: 1px solid $c-border-form;
     border-radius: 3px;
+    overflow-y: auto;
+
+    @media (max-width: 1023px) {
+      margin: 0 0 30px;
+      overflow-y: visible;
+    }
+
+    @media (max-width: 767px) {
+      max-width: 392px;
+    }
+
+    &_recipient {
+      flex: .95 0 0;
+    }
+
+    &_delivery {
+      flex: .95 0 0;
+    }
+
+    &_order {
+      flex: 1.1 0 0;
+    }
   }
 
-  &__head {
+  &__title {
     margin: 0 0 10px;
     font-size: 24px;
     color: $c-text;
+
+    @media (max-width: 1023px) {
+      font-size: 21px;
+    }
   }
 
   &__top {
@@ -39,9 +81,10 @@
 
   &__center {
     padding: 12px 22px 0;
-    height: 600px;
 
-    overflow-y: auto;
+    @media (max-width: 767px) {
+      padding: 12px 10px 0;
+    }
   }
 
   &-subtitle {
@@ -50,20 +93,27 @@
     height: 60px;
     padding: 0 22px;
 
+    @media (max-width: 767px) {
+      padding: 0 10px;
+    }
+
     &__num {
+      flex-shrink: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: 5px 0 0 2px;
       width: 20px;
       height: 20px;
-      font-size: 15px;
+      font-size: 14px;
+      line-height: 14px;
       color: #fff;
       background: $c-red;
       border-radius: 50%;
     }
 
     &__head {
+      flex-shrink: 0;
       display: flex;
       align-items: center;
       margin: 5px 0 0 10px;
@@ -238,7 +288,7 @@
 
       display: block;
       padding: 0 0 0 25px;
-      margin: 10px 0 0;
+      margin: 20px 0 0;
 
       font-size: 11px;
       color: $c-red;
@@ -267,11 +317,13 @@
 
 .order-box {
   position: relative;
-
   margin: 12px 0;
   padding: 0 0 10px;
-
   border-bottom: 1px solid $c-border-form;
+
+  &:last-child {
+    border-bottom: 0;
+  }
 
   &__count {
     position: absolute;

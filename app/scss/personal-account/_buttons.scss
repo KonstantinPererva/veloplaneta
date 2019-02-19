@@ -68,7 +68,7 @@
   }
 }
 
-.button-order-panel {
+.button-order {
   @extend .button-common;
   position: relative;
   border: 0;
@@ -98,7 +98,7 @@
       }
     }
 
-    & .button-order-panel__remove {
+    & .button-order__remove {
       display: block;
     }
   }
@@ -142,7 +142,7 @@
   font-size: 20px;
 }
 
-.button-order-panel-list {
+.button-order-list {
   list-style: none;
   padding: 0;
   margin: 0;

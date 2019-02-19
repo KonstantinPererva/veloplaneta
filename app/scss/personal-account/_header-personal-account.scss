@@ -64,6 +64,12 @@ nav {
     align-items: center;
     margin: 0 19px;
 
+    &_exchange-rate {
+      @media (max-width: 1279px) {
+        display: none;
+      }
+    }
+
     &.mail {
       position: relative;
 
